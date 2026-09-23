@@ -127,6 +127,17 @@
       "source_location": "L1"
     },
     {
+      "id": "docker_download_models_rationale_1",
+      "label": "Smart model downloader for ComfyUI",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "download_models.py",
+      "file_type": "rationale",
+      "norm_label": "smart model downloader for comfyui",
+      "source_file": "docker/download_models.py",
+      "source_location": "L1"
+    },
+    {
       "id": "docker_download_models_rationale_18",
       "label": "Download file with progress bar and validation",
       "_origin": "ast",
@@ -136,17 +147,6 @@
       "norm_label": "download file with progress bar and validation",
       "source_file": "docker/download_models.py",
       "source_location": "L18"
-    },
-    {
-      "id": "docker_download_models_rationale_2",
-      "label": "Smart model downloader for ComfyUI",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "download_models.py",
-      "file_type": "rationale",
-      "norm_label": "smart model downloader for comfyui",
-      "source_file": "docker/download_models.py",
-      "source_location": "L2"
     },
     {
       "id": "docker_download_models_rationale_60",
@@ -1701,6 +1701,18 @@
       "type": "external"
     },
     {
+      "id": "subprocess",
+      "label": "subprocess",
+      "_origin": "semantic",
+      "community": 1,
+      "community_name": "download_models.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "subprocess",
+      "source_file": "",
+      "type": "external"
+    },
+    {
       "id": "sys",
       "label": "sys",
       "_origin": "semantic",
@@ -1733,17 +1745,6 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "urllib_parse",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "subprocess",
-      "label": "subprocess",
-      "community": 1,
-      "community_name": "download_models.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "subprocess",
       "source_file": "",
       "type": "external"
     }
@@ -1859,6 +1860,18 @@
     },
     {
       "source": "docker_download_models",
+      "target": "yaml",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "docker/download_models.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "docker_download_models",
       "target": "os",
       "relation": "imports",
       "_origin": "ast",
@@ -1866,7 +1879,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "docker/download_models.py",
-      "source_location": "L6",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -1878,19 +1891,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "docker/download_models.py",
-      "source_location": "L7",
-      "weight": 1.0
-    },
-    {
-      "source": "docker_download_models",
-      "target": "yaml",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "docker/download_models.py",
-      "source_location": "L8",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -1907,7 +1908,7 @@
     },
     {
       "source": "pre_commit_hooks_graphify_sync",
-      "target": "subprocess",
+      "target": "os",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -1919,7 +1920,7 @@
     },
     {
       "source": "pre_commit_hooks_graphify_sync",
-      "target": "sys",
+      "target": "subprocess",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -1931,7 +1932,7 @@
     },
     {
       "source": "pre_commit_hooks_graphify_sync",
-      "target": "os",
+      "target": "sys",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -1950,7 +1951,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "docker/download_models.py",
-      "source_location": "L10",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -3010,6 +3011,17 @@
       "weight": 1.0
     },
     {
+      "source": "docker_download_models_rationale_1",
+      "target": "docker_download_models",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker/download_models.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "docker_download_models_rationale_18",
       "target": "docker_download_models_download_file",
       "relation": "rationale_for",
@@ -3018,17 +3030,6 @@
       "confidence_score": 1.0,
       "source_file": "docker/download_models.py",
       "source_location": "L18",
-      "weight": 1.0
-    },
-    {
-      "source": "docker_download_models_rationale_2",
-      "target": "docker_download_models",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker/download_models.py",
-      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -3390,5 +3391,5 @@
       "source_file": ".roo/skills-knowledge/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "8a73ecefd8dfd905b86bd02ad52d68be1f350f97"
+  "built_at_commit": "eb019f268d3182afaae6b2ac3fa00c56c1ea17b3"
 }

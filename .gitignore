@@ -1,10 +1,54 @@
-.vscode
-ComfyUI
-custom_nodes
-input
-output
-models
+# VS Code
+.vscode/
 
-# graphify
-graphify-out/20*/
-graphify-out/cache/
+# ComfyUI workspace
+ComfyUI/
+custom_nodes/
+input/
+output/
+models/
+
+# Graphify
+graphify-out/
+
+# AI docs / findings
+findings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Roomodes
+.roomodes
+
+# Docker build artifacts
+*.tar
+*.tar.gz
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo

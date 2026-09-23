@@ -9,7 +9,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8a73ecef`
+- Built from commit: `eb019f26`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -55,7 +55,7 @@
 
 ### Community 1 - "download_models.py"
 Cohesion: 0.15
-Nodes (16): download_file(), download_model_set(), load_models_config(), log(), main(), Download file with progress bar and validation, Smart model downloader for ComfyUI, Load models configuration from YAML (+8 more)
+Nodes (16): download_file(), download_model_set(), load_models_config(), log(), main(), Smart model downloader for ComfyUI, Download file with progress bar and validation, Load models configuration from YAML (+8 more)
 
 ### Community 2 - "ComfyUI ROCm Docker Project"
 Cohesion: 0.25

@@ -1,13 +1,13 @@
-#!/usr/bin/env python3
 """
 Smart model downloader for ComfyUI
 """
 
 import os
 import sys
-import yaml
-import requests
 from pathlib import Path
+
+import requests
+import yaml
 
 
 def log(message):
@@ -49,7 +49,7 @@ def download_file(url, filepath, name, min_size=0):
             filepath.unlink()
             return False
 
-    except Exception as e:
+    except (requests.RequestException, OSError) as e:
         log(f"{name} download failed: {e}")
         if filepath.exists():
             filepath.unlink()
@@ -61,7 +61,7 @@ def load_models_config(config_path):
     try:
         with open(config_path, "r") as f:
             return yaml.safe_load(f)
-    except Exception as e:
+    except (yaml.YAMLError, FileNotFoundError) as e:
         log(f"Failed to load config {config_path}: {e}")
         return None
 

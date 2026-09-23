@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Pre-commit hook that syncs graphify outputs when topology changes are detected."""
 
+import os
 import subprocess
 import sys
-import os
 
 
 def main():
@@ -16,13 +16,14 @@ def main():
     try:
         result = subprocess.run(
             ["graphify", "update", "."],
+            check=False,
             capture_output=True,
             text=True,
         )
     except FileNotFoundError:
         print(
             "[graphify-sync] ERROR: 'graphify' command not found. "
-            "Install it first (e.g., pip install graphify)."
+            "Install it first (e.g., uv tool install graphify)."
         )
         return 1
 
@@ -47,6 +48,7 @@ def main():
 
     label_result = subprocess.run(
         ["graphify", "label", "."],
+        check=False,
         capture_output=True,
         text=True,
     )
