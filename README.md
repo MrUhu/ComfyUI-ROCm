@@ -149,7 +149,7 @@ Run with: `docker compose up -d`
 
 ### Performance Metrics
 - **Generation Time**: ~30-60s for 512x512 images
-- **VRAM Usage**: 4-8GB for basic operations  
+- **VRAM Usage**: 4-8GB for basic operations
 - **Model Loading**: ~30-60s first time, cached afterward
 - **Batch Processing**: Multiple images supported
 
@@ -179,7 +179,7 @@ This project is licensed under GPL-3.0. See the [LICENSE](LICENSE) file for deta
 
 **Acknowledgments:**
 - [ComfyUI](https://github.com/comfyanonymous/ComfyUI) - Node-based AI workflow interface
-- [AMD ROCm](https://rocm.docs.amd.com/) - Open source GPU computing platform  
+- [AMD ROCm](https://rocm.docs.amd.com/) - Open source GPU computing platform
 - ROCm community for AMD GPU AI support
 
 ---

@@ -10,7 +10,7 @@
 # - ComfyUI: e18f53c (2025-06-27)
 # - ComfyUI Tag: v0.3.43
 # - ComfyUI Version: 0.3.43
-# 
+#
 # Legend:
 #   ✅ SAFE - can be installed without breaking ROCm
 #   ❌ BROKEN - breaks ROCm, fails to install, or times out

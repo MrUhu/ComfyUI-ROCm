@@ -1,0 +1,33 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.13
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format
+
+  # --- General File Hygiene ---
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+        args: ["--maxkb=600"]
+
+  # --- Shell Script Validation ---
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
+    hooks:
+      - id: shellcheck
+
+  # --- Graphify Topology Sync ---
+  - repo: local
+    hooks:
+      - id: graphify-sync
+        name: graphify-sync
+        entry: .pre-commit-hooks/graphify-sync.py
+        language: script
+        pass_filenames: false
+        always_run: true

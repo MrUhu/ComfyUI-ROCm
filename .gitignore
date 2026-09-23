@@ -4,3 +4,7 @@ custom_nodes
 input
 output
 models
+
+# graphify
+graphify-out/20*/
+graphify-out/cache/

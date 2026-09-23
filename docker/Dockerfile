@@ -51,7 +51,7 @@ RUN chmod +x /workspace/startup.sh
 # MODEL_DOWNLOAD options:
 #   "default"   - Download basic SD 1.5 model (default)
 #   "all"       - Download full model set (SD 1.5, SDXL, ControlNet, etc.)
-#   "realistic" - Download realistic photo models  
+#   "realistic" - Download realistic photo models
 #   "none"      - Skip all downloads, use existing models only
 #   Custom      - Any section name from models.conf
 ENV MODEL_DOWNLOAD=default
@@ -65,4 +65,3 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 # Use smart startup script that handles model downloads
 CMD ["/workspace/startup.sh"]
-
