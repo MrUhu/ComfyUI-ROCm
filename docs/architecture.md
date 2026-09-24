@@ -7,7 +7,7 @@
 │                        Host System                              │
 │  ┌──────────────┐    ┌──────────────────┐    ┌───────────────┐  │
 │  │ ROCm Drivers │    │ Docker Engine    │    │ AMD GPU       │  │
-│  │ (6.4+)       │    │                  │    │ (/dev/kfd     │  │
+│  │ (10.0+)      │    │                  │    │ (/dev/kfd     │  │
 │  └──────┬───────┘    │  ┌────────────┐  │    │ /dev/dri)     │  │
 │         │            │  │ Container  │  │    └───────────────┘  │
 │         │            │  │            │  │                      │  │
@@ -24,11 +24,11 @@
 ### Image Layers
 
 ```
-rocm/pytorch:rocm6.4.1_ubuntu24.04_py3.12_pytorch_release_2.6.0
-├── Ubuntu 24.04 base
-├── ROCm 6.4.1 libraries
-├── PyTorch 2.6.0 with ROCm support
-├── Python 3.12
+rocm/pytorch:rocm10.0_ubuntu26.04_py3.14_pytorch_release_2.13.0
+├── Ubuntu 26.04 base
+├── ROCm 10.0 libraries
+├── PyTorch 2.13.0 with ROCm support
+├── Python 3.14
 ├── System dependencies (git, wget, curl)
 ├── ComfyUI source code
 ├── ROCm-compatible Python packages
@@ -223,14 +223,14 @@ Browser (displays result)
 
 ```
 rocm/pytorch base image
-├── ROCm 6.4.1 libraries
+├── ROCm 10.0 libraries
 │   ├── HIP runtime
 │   ├── rocBLAS
 │   ├── MIOpen
 │   └── rcCL
-├── PyTorch 2.6.0
+├── PyTorch 2.13.0
 │   └── ROCm backend
-├── Python 3.12
+├── Python 3.14
 │   └── pip packages (from requirements_rocm.txt)
 │       ├── numpy, scipy
 │       ├── Pillow, imageio

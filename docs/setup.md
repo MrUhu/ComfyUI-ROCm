@@ -13,14 +13,16 @@
 
 ### Software Requirements
 
-- **OS**: Linux (Ubuntu 24.04+ recommended)
+- **OS**: Linux (Ubuntu 26.04 recommended)
 - **Docker**: Latest version with GPU support
-- **ROCm Drivers**: 6.4+ installed on host
-- **AMD GPU**: RX 6000/7000+ series with ROCm support
+- **ROCm Drivers**: 10.0+ installed on host
+- **AMD GPU**: RX 6000/7000/9000 series with ROCm support
 
 ## Step 1: Install ROCm Drivers
 
-### Ubuntu/Debian
+### Ubuntu 26.04
+
+ROCm 10.0 is available in the Ubuntu 26.04 repositories. Install with:
 
 ```bash
 # Add ROCm repository

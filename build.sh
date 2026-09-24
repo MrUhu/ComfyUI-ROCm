@@ -6,7 +6,9 @@ set -e
 # Configuration
 IMAGE_NAME="comfyui-rocm"
 VERSION="${1:-latest}"
-DETAILED_TAG="comfyui_0.3.43__rocm6.4.1_ubuntu24.04_py3.12_pytorch_2.6.0"
+# Extract base image tag from Dockerfile
+BASE_IMAGE_TAG=$(grep '^FROM ' docker/Dockerfile | head -1 | cut -d':' -f2)
+DETAILED_TAG="comfyui_${VERSION}__${BASE_IMAGE_TAG}"
 
 echo "🐳 Building ComfyUI ROCm Docker image..."
 echo "📦 Tags: ${IMAGE_NAME}:${VERSION}, ${IMAGE_NAME}:${DETAILED_TAG}"

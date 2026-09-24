@@ -914,7 +914,7 @@
       "node_kind": "heading",
       "norm_label": "access comfyui",
       "source_file": "docs/setup.md",
-      "source_location": "L132"
+      "source_location": "L134"
     },
     {
       "id": "docs_setup_build_fails_on_dependencies",
@@ -926,7 +926,7 @@
       "node_kind": "heading",
       "norm_label": "build fails on dependencies",
       "source_file": "docs/setup.md",
-      "source_location": "L172"
+      "source_location": "L174"
     },
     {
       "id": "docs_setup_build_time_expectations",
@@ -938,7 +938,7 @@
       "node_kind": "heading",
       "norm_label": "build time expectations",
       "source_file": "docs/setup.md",
-      "source_location": "L89"
+      "source_location": "L91"
     },
     {
       "id": "docs_setup_container_cannot_access_gpu",
@@ -950,7 +950,7 @@
       "node_kind": "heading",
       "norm_label": "container cannot access gpu",
       "source_file": "docs/setup.md",
-      "source_location": "L148"
+      "source_location": "L150"
     },
     {
       "id": "docs_setup_direct_docker_build",
@@ -962,7 +962,7 @@
       "node_kind": "heading",
       "norm_label": "direct docker build",
       "source_file": "docs/setup.md",
-      "source_location": "L83"
+      "source_location": "L85"
     },
     {
       "id": "docs_setup_docker_compose_recommended_for_production",
@@ -974,7 +974,7 @@
       "node_kind": "heading",
       "norm_label": "docker compose (recommended for production)",
       "source_file": "docs/setup.md",
-      "source_location": "L126"
+      "source_location": "L128"
     },
     {
       "id": "docs_setup_docker_gpu_support_not_working",
@@ -986,7 +986,7 @@
       "node_kind": "heading",
       "norm_label": "docker gpu support not working",
       "source_file": "docs/setup.md",
-      "source_location": "L162"
+      "source_location": "L164"
     },
     {
       "id": "docs_setup_hardware_requirements",
@@ -1010,7 +1010,7 @@
       "node_kind": "heading",
       "norm_label": "next steps",
       "source_file": "docs/setup.md",
-      "source_location": "L182"
+      "source_location": "L184"
     },
     {
       "id": "docs_setup_other_distributions",
@@ -1022,7 +1022,7 @@
       "node_kind": "heading",
       "norm_label": "other distributions",
       "source_file": "docs/setup.md",
-      "source_location": "L37"
+      "source_location": "L39"
     },
     {
       "id": "docs_setup_prerequisites",
@@ -1046,7 +1046,7 @@
       "node_kind": "heading",
       "norm_label": "quick run (single command)",
       "source_file": "docs/setup.md",
-      "source_location": "L114"
+      "source_location": "L116"
     },
     {
       "id": "docs_setup_rocm_drivers_not_detected",
@@ -1058,7 +1058,7 @@
       "node_kind": "heading",
       "norm_label": "rocm drivers not detected",
       "source_file": "docs/setup.md",
-      "source_location": "L138"
+      "source_location": "L140"
     },
     {
       "id": "docs_setup_setup_instructions",
@@ -1106,7 +1106,7 @@
       "node_kind": "heading",
       "norm_label": "step 2: verify rocm installation",
       "source_file": "docs/setup.md",
-      "source_location": "L41"
+      "source_location": "L43"
     },
     {
       "id": "docs_setup_step_3_clone_the_repository",
@@ -1118,7 +1118,7 @@
       "node_kind": "heading",
       "norm_label": "step 3: clone the repository",
       "source_file": "docs/setup.md",
-      "source_location": "L63"
+      "source_location": "L65"
     },
     {
       "id": "docs_setup_step_4_build_the_docker_image",
@@ -1130,7 +1130,7 @@
       "node_kind": "heading",
       "norm_label": "step 4: build the docker image",
       "source_file": "docs/setup.md",
-      "source_location": "L70"
+      "source_location": "L72"
     },
     {
       "id": "docs_setup_step_5_verify_the_build",
@@ -1142,7 +1142,7 @@
       "node_kind": "heading",
       "norm_label": "step 5: verify the build",
       "source_file": "docs/setup.md",
-      "source_location": "L98"
+      "source_location": "L100"
     },
     {
       "id": "docs_setup_step_6_run_comfyui",
@@ -1154,7 +1154,7 @@
       "node_kind": "heading",
       "norm_label": "step 6: run comfyui",
       "source_file": "docs/setup.md",
-      "source_location": "L112"
+      "source_location": "L114"
     },
     {
       "id": "docs_setup_troubleshooting_setup_issues",
@@ -1166,17 +1166,17 @@
       "node_kind": "heading",
       "norm_label": "troubleshooting setup issues",
       "source_file": "docs/setup.md",
-      "source_location": "L136"
+      "source_location": "L138"
     },
     {
-      "id": "docs_setup_ubuntu_debian",
-      "label": "Ubuntu/Debian",
+      "id": "docs_setup_ubuntu_26_04",
+      "label": "Ubuntu 26.04",
       "_origin": "ast",
       "community": 7,
       "community_name": "Setup Instructions",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "ubuntu/debian",
+      "norm_label": "ubuntu 26.04",
       "source_file": "docs/setup.md",
       "source_location": "L23"
     },
@@ -1190,7 +1190,7 @@
       "node_kind": "heading",
       "norm_label": "using build.sh (recommended)",
       "source_file": "docs/setup.md",
-      "source_location": "L72"
+      "source_location": "L74"
     },
     {
       "id": "docs_overview_comfyui_rocm_project_overview",
@@ -2440,13 +2440,24 @@
     },
     {
       "source": "docs_setup_setup_instructions",
+      "target": "docs_setup_step_5_verify_the_build",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/setup.md",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_setup_setup_instructions",
       "target": "docs_setup_step_6_run_comfyui",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L112",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -2457,7 +2468,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L136",
+      "source_location": "L138",
       "weight": 1.0
     },
     {
@@ -2468,7 +2479,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L182",
+      "source_location": "L184",
       "weight": 1.0
     },
     {
@@ -2501,7 +2512,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L41",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -2512,7 +2523,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L63",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -2523,23 +2534,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L70",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_setup_setup_instructions",
-      "target": "docs_setup_step_5_verify_the_build",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/setup.md",
-      "source_location": "L98",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
       "source": "docs_setup_step_1_install_rocm_drivers",
-      "target": "docs_setup_ubuntu_debian",
+      "target": "docs_setup_ubuntu_26_04",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -2556,7 +2556,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L37",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -2567,7 +2567,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L72",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -2578,7 +2578,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L83",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -2589,7 +2589,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L89",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -2600,7 +2600,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L114",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -2611,7 +2611,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L126",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -2622,7 +2622,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L132",
+      "source_location": "L134",
       "weight": 1.0
     },
     {
@@ -2633,7 +2633,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L138",
+      "source_location": "L140",
       "weight": 1.0
     },
     {
@@ -2644,7 +2644,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L148",
+      "source_location": "L150",
       "weight": 1.0
     },
     {
@@ -2655,7 +2655,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L162",
+      "source_location": "L164",
       "weight": 1.0
     },
     {
@@ -2666,7 +2666,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L172",
+      "source_location": "L174",
       "weight": 1.0
     },
     {
@@ -3117,7 +3117,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L184",
+      "source_location": "L186",
       "weight": 1.0
     },
     {
@@ -3128,7 +3128,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/setup.md",
-      "source_location": "L186",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -3391,5 +3391,5 @@
       "source_file": ".roo/skills-knowledge/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "eb019f268d3182afaae6b2ac3fa00c56c1ea17b3"
+  "built_at_commit": "669c14be9a65886377adcd1e0befcedd4e539806"
 }

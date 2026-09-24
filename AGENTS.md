@@ -60,6 +60,15 @@ docker exec comfyui-rocm python -c "import torch; print(torch.cuda.is_available(
 | `HIP_VISIBLE_DEVICES` | GPU index | `0` |
 | `CUDA_VISIBLE_DEVICES` | Must be empty for ROCm | `""` |
 
+## Version Information
+
+| Component | Version |
+|-----------|---------|
+| Base Image | `rocm/pytorch:rocm10.0_ubuntu26.04_py3.14_pytorch_release_2.13.0` |
+| Python | 3.14.0 |
+| PyTorch | 2.13.0+git |
+| ROCm | 10.0 |
+
 ## Key Paths (inside container)
 
 - ComfyUI: `/workspace/ComfyUI/`

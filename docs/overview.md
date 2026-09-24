@@ -8,7 +8,7 @@ ComfyUI ROCm is a Docker-based deployment solution for [ComfyUI](https://github.
 
 ComfyUI is traditionally designed for NVIDIA GPUs with CUDA support. This project bridges the gap for AMD GPU owners by:
 
-- Providing a pre-configured ROCm environment with PyTorch 2.6.0
+- Providing a pre-configured ROCm environment with PyTorch 2.13.0
 - Including all tested and verified dependencies for AMD hardware
 - Offering smart model management with configurable download sets
 - Ensuring proper device access (`/dev/kfd`, `/dev/dri`) for ROCm compatibility
@@ -18,7 +18,7 @@ ComfyUI is traditionally designed for NVIDIA GPUs with CUDA support. This projec
 | Feature | Description |
 |---------|-------------|
 | **Node-based AI workflow** | Visual interface for creating complex AI pipelines |
-| **AMD ROCm optimized** | Native AMD GPU acceleration with ROCm 6.4+ |
+| **AMD ROCm optimized** | Native AMD GPU acceleration with ROCm 10.0+ |
 | **Smart model management** | Automatic downloads with configurable model sets |
 | **Tested compatibility** | All dependencies verified on real AMD hardware |
 | **Ready to use** | Pre-configured with sample workflows |
@@ -28,11 +28,11 @@ ComfyUI is traditionally designed for NVIDIA GPUs with CUDA support. This projec
 
 | Component | Version |
 |-----------|---------|
-| Base Image | `rocm/pytorch:rocm6.4.1_ubuntu24.04_py3.12_pytorch_release_2.6.0` |
-| Python | 3.12.10 |
-| PyTorch | 2.6.0+git684f6f2 |
-| ROCm | 6.4.43483-a187df25c |
-| ComfyUI | v0.3.43 (e18f53c, 2025-06-27) |
+| Base Image | `rocm/pytorch:rocm10.0_ubuntu26.04_py3.14_pytorch_release_2.13.0` |
+| Python | 3.14.0 |
+| PyTorch | 2.13.0+git |
+| ROCm | 10.0 |
+| ComfyUI | latest |
 
 ## Supported Hardware
 

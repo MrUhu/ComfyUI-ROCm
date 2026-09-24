@@ -1,4 +1,4 @@
-# Graph Report - ComfyUI-ROCm  (2026-09-23)
+# Graph Report - ComfyUI-ROCm  (2026-09-24)
 
 ## Corpus Check
 - cluster-only mode — file stats not available
@@ -6,10 +6,10 @@
 ## Summary
 - 137 nodes · 145 edges · 13 communities (8 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
-- Token cost: 0 input · 0 output
+- Token cost: 1,348 input · 2,128 output
 
 ## Graph Freshness
-- Built from commit: `eb019f26`
+- Built from commit: `669c14be`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

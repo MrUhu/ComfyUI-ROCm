@@ -2,18 +2,18 @@
 
 🔥 **ComfyUI with AMD ROCm support** - Run ComfyUI on AMD GPUs with optimized ROCm-compatible dependencies.
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/corundex/comfyui-rocm)](https://hub.docker.com/r/corundex/comfyui-rocm) [![ROCm](https://img.shields.io/badge/ROCm-6.4+-green)](https://rocm.docs.amd.com/) [![AMD GPU](https://img.shields.io/badge/AMD-RX%206000%2B-red)](https://www.amd.com/en/products/graphics/desktops/radeon.html)
+[![Docker Pulls](https://img.shields.io/docker/pulls/corundex/comfyui-rocm)](https://hub.docker.com/r/corundex/comfyui-rocm) [![ROCm](https://img.shields.io/badge/ROCm-10.0+-green)](https://rocm.docs.amd.com/) [![AMD GPU](https://img.shields.io/badge/AMD-RX%206000%2B-red)](https://www.amd.com/en/products/graphics/desktops/radeon.html)
 
 ![ComfyUI Interface](Screenshot.png)
 *ComfyUI running on AMD ROCm with sample workflow and generated landscape image*
 
 ## 📋 Version Information
 
-- **Base Image**: `rocm/pytorch:rocm6.4.1_ubuntu24.04_py3.12_pytorch_release_2.6.0`
-- **Python**: 3.12.10
-- **PyTorch**: 2.6.0+git684f6f2
-- **ROCm**: 6.4.43483-a187df25c
-- **ComfyUI**: v0.3.43 (e18f53c, 2025-06-27)
+- **Base Image**: `rocm/pytorch:rocm10.0_ubuntu26.04_py3.14_pytorch_release_2.13.0`
+- **Python**: 3.14.0
+- **PyTorch**: 2.13.0+git
+- **ROCm**: 10.0
+- **ComfyUI**: latest
 
 ## ✨ Key Features
 
@@ -45,11 +45,11 @@ Access ComfyUI at: **http://localhost:8188**
 
 | Component  | Requirement                                |
 | ---------- | ------------------------------------------ |
-| **GPU**    | AMD RX 6000/7000+ series with ROCm support |
+| **GPU**    | AMD RX 6000/7000/9000 series with ROCm support |
 | **VRAM**   | 8GB minimum (16GB+ recommended)            |
-| **OS**     | Linux (Ubuntu 24.04+ recommended)          |
+| **OS**     | Linux (Ubuntu 26.04 recommended)          |
 | **Docker** | Latest version with GPU support            |
-| **ROCm**   | Drivers 6.4+ installed on host             |
+| **ROCm**   | Drivers 10.0+ installed on host             |
 
 ## 🔧 Setup Instructions
 

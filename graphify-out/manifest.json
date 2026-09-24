@@ -1,9 +1,9 @@
 {
   "build.sh": {
-    "mtime": 1790146186.9030087,
-    "seen": 1790149465.3702807,
-    "ast_hash": "56a56cb5605deea6da9d8ea48d3e6544",
-    "semantic_hash": "56a56cb5605deea6da9d8ea48d3e6544"
+    "mtime": 1790162279.513481,
+    "seen": 1790240403.1731837,
+    "ast_hash": "985f82602143d1ceffaf073ac1f9047a",
+    "semantic_hash": ""
   },
   "docker/download_models.py": {
     "mtime": 1790162012.0908475,
@@ -78,15 +78,15 @@
     "semantic_hash": "9378bd03d56baaf78bd738ab3848f142"
   },
   "AGENTS.md": {
-    "mtime": 1790155057.8550205,
-    "seen": 1790156012.7260892,
-    "ast_hash": "9049b1d5df69a8e13eb6fa522b9ed1c8",
+    "mtime": 1790239988.693542,
+    "seen": 1790240403.173203,
+    "ast_hash": "4a40d61d17d7a2e5248dc3703e234349",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1790156012.2824771,
-    "seen": 1790156012.72609,
-    "ast_hash": "815141858b17b604ed684533fff22e2f",
+    "mtime": 1790239854.1680863,
+    "seen": 1790240403.1732042,
+    "ast_hash": "5876af9c3a786d7163fca3dc05bd01cf",
     "semantic_hash": ""
   },
   "docker-compose.yaml": {
@@ -120,21 +120,21 @@
     "semantic_hash": ""
   },
   "docs/architecture.md": {
-    "mtime": 1790150385.2851934,
-    "seen": 1790154680.6387,
-    "ast_hash": "ca1a11a9a4eeb78552a1276283814fa6",
+    "mtime": 1790239771.6991096,
+    "seen": 1790240403.1732073,
+    "ast_hash": "059f3fb889637b86a768aa578e9d7346",
     "semantic_hash": ""
   },
   "docs/overview.md": {
-    "mtime": 1790150103.3733582,
-    "seen": 1790154680.638701,
-    "ast_hash": "0c748708c66d73d2ea48af7eb2eb68a0",
+    "mtime": 1790239615.732049,
+    "seen": 1790240403.1732082,
+    "ast_hash": "e9ea532be79a9164c7e3e02c4d494e54",
     "semantic_hash": ""
   },
   "docs/setup.md": {
-    "mtime": 1790150177.2929137,
-    "seen": 1790154680.6387024,
-    "ast_hash": "334c2590a2ccc2753e3c5ff5b106dacb",
+    "mtime": 1790239682.3279083,
+    "seen": 1790240403.1732087,
+    "ast_hash": "6c600945db15030c0965f72bd979f1f2",
     "semantic_hash": ""
   },
   "docs/usage.md": {
