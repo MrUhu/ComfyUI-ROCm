@@ -1,6 +1,6 @@
 # ROCm-compatible requirements.txt for ComfyUI
 # Generated on Tue Sep 23 12:58:00 UTC 2026
-# Base image: rocm/pytorch:latest
+# Base image: rocm/pytorch:rocm10.0_ubuntu26.04_py3.14_pytorch_release_2.13.0
 # Each package tested in fresh ROCm container with 300s timeout
 #
 # Version Information:
@@ -8,39 +8,25 @@
 # - PyTorch: 2.13.0+git
 # - ROCm: 10.0
 # - ComfyUI: latest
-# - ComfyUI Tag: latest
-# - ComfyUI Version: latest
 #
-# Legend:
-#   ✅ SAFE - can be installed without breaking ROCm
-#   ❌ BROKEN - breaks ROCm, fails to install, or times out
-#   📦 ALREADY - already installed correctly in base image
+# Pre-installed in base image (rocm/pytorch):
+#   numpy>=2.5.0, tqdm>=4.70.0
 
 comfyui-frontend-package==1.53.6
-comfyui-workflow-templates==0.11.68
+comfyui-workflow-templates==0.11.69
 comfyui-embedded-docs==0.5.12
-# 📦 ALREADY: torch
 torchsde
-# 📦 ALREADY: torchvision
-# 🌙 NIGHTLY: torchaudio (use: pip install --pre torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.4)
-# 📦 ALREADY: numpy>=1.25.0
 einops
 transformers>=4.50.3
 tokenizers>=0.13.3
 sentencepiece
 safetensors>=0.4.2
-# 📦 ALREADY: aiohttp>=3.11.8
-# 📦 ALREADY: yarl>=1.18.0
 pyyaml
 Pillow
-# 📦 ALREADY: scipy
-# 📦 ALREADY: tqdm
-# 📦 ALREADY: psutil
 alembic
 SQLAlchemy>=2.0.0
 kornia>=0.7.1
 spandrel
-# 📦 ALREADY: soundfile
 av>=17.0.0
 pydantic~=2.0
 pydantic-settings~=2.0
@@ -50,10 +36,8 @@ comfy-aimdo==0.5.5
 requests
 simpleeval>=1.0.0
 blake3
-
-# Testing Summary:
-# ✅ SAFE packages: 24
-# 📦 ALREADY installed: 9
-# 🌙 NIGHTLY packages: 1
-# ❌ BROKEN packages: 0
-# Total tested: 34
+aiohttp>=3.11.8
+yarl>=1.18.0
+scipy
+psutil
+soundfile
