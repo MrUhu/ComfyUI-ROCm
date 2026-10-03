@@ -66,9 +66,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1790239854.1680863,
-    "seen": 1790240403.1732042,
-    "ast_hash": "5876af9c3a786d7163fca3dc05bd01cf",
+    "mtime": 1791036414.2150807,
+    "seen": 1791036537.021341,
+    "ast_hash": "c08571c15b818f8d4f49ca3462c709f9",
     "semantic_hash": ""
   },
   "docker-compose.yaml": {
@@ -138,15 +138,45 @@
     "semantic_hash": ""
   },
   "artifacts/workspace/models.yaml": {
-    "mtime": 1790146186.9044495,
-    "seen": 1791029340.2098844,
-    "ast_hash": "d80ee5622fcc54996f4f73ea1cf2514e",
+    "mtime": 1791032804.521131,
+    "seen": 1791032825.1947691,
+    "ast_hash": "5f54d17f062a4e71d90aa4d6fe1fd503",
     "semantic_hash": ""
   },
   "artifacts/workspace/requirements_rocm.txt": {
     "mtime": 1791021645.164214,
     "seen": 1791029340.2098854,
     "ast_hash": "b2e6d157e2c0ac1aba34ee49771ae2e0",
+    "semantic_hash": ""
+  },
+  "artifacts/comfyui/artistic_workflow.json": {
+    "mtime": 1791033118.110556,
+    "seen": 1791036537.0213232,
+    "ast_hash": "85c9339988fb8a8aa5f04e511c877f16",
+    "semantic_hash": ""
+  },
+  "artifacts/comfyui/flux_dev_workflow.json": {
+    "mtime": 1791033114.7544544,
+    "seen": 1791036537.0213253,
+    "ast_hash": "0250bc4eee1902c15453fd8471b3fd30",
+    "semantic_hash": ""
+  },
+  "artifacts/comfyui/photorealistic_workflow.json": {
+    "mtime": 1791033116.995879,
+    "seen": 1791036537.021326,
+    "ast_hash": "1630260a8ebec5b7abe3e129db8d3394",
+    "semantic_hash": ""
+  },
+  "artifacts/comfyui/pixelart_workflow.json": {
+    "mtime": 1791033119.2255898,
+    "seen": 1791036537.021327,
+    "ast_hash": "b403091d9b6178ce50a612b9e3646b69",
+    "semantic_hash": ""
+  },
+  "artifacts/comfyui/realistic_workflow.json": {
+    "mtime": 1791033115.8704882,
+    "seen": 1791036537.0213277,
+    "ast_hash": "ed73e73ad03cf4d2ec60072237d14dfd",
     "semantic_hash": ""
   }
 }

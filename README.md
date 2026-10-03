@@ -49,22 +49,42 @@ Access ComfyUI at: **http://localhost:8188**
 | **VRAM**   | 8GB minimum (16GB+ recommended)            |
 | **OS**     | Linux (Ubuntu 26.04 recommended)          |
 | **Docker** | Latest version with GPU support            |
-| **ROCm**   | Drivers 10.0+ installed on host             |
+| **Kernel** | 5.4+ with `amdgpu` module loaded             |
 
 ## 🔧 Setup Instructions
 
-### 1. Install ROCm Drivers
+### 1. Verify AMD GPU Support
+
+**The container includes all ROCm userspace libraries.** The host only needs kernel-level AMD GPU support, which is included in all modern Linux kernels.
+
 ```bash
-# Ubuntu/Debian
-curl -fsSL https://repo.radeon.com/rocm/rocm.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/rocm.gpg
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/rocm.gpg] https://repo.radeon.com/rocm/apt/6.4 jammy main" | sudo tee /etc/apt/sources.list.d/rocm.list
-sudo apt update && sudo apt install rocm-dkms
-sudo usermod -a -G render,video $USER
+# Check if amdgpu is loaded (most modern distros have it by default)
+lsmod | grep amdgpu
 ```
 
-### 2. Verify ROCm Installation
+If not loaded, load it:
 ```bash
-rocm-smi  # Should show your AMD GPU(s)
+sudo modprobe amdgpu
+```
+
+Add your user to the required groups:
+```bash
+sudo usermod -a -G render,video $USER
+# Log out and back in for group changes to take effect
+```
+
+Verify device nodes exist:
+```bash
+ls -l /dev/kfd /dev/dri
+```
+
+> **Note:** You do NOT need to install ROCm userspace packages (`rocm-dkms`, `rocm-smi`, etc.) on the host. The Docker container includes all necessary ROCm libraries. The `rocm-dkms` package is only needed if your GPU isn't supported by your distribution's mainline kernel.
+
+### 2. Verify GPU Access (optional)
+
+If you want to verify ROCm works on your system:
+```bash
+rocm-smi  # Shows your AMD GPU(s) — optional, for diagnostics only
 ```
 
 ### 3. Run ComfyUI
@@ -162,7 +182,7 @@ Run with: `docker compose up -d`
 
 | Issue                     | Solution                                                                                                           |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Container won't start** | Check ROCm drivers: `rocm-smi`                                                                                     |
+| **Container won't start** | Check kernel modules: `lsmod | grep amdgpu` |
 | **No GPU detected**       | Verify container GPU access: `docker exec comfyui-rocm python -c "import torch; print(torch.cuda.is_available())"` |
 | **Model download fails**  | Check internet connection, disk space, and logs                                                                    |
 | **Out of memory**         | Reduce batch size, use smaller models, ensure 8GB+ VRAM                                                            |
