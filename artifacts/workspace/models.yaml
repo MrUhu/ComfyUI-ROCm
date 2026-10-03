@@ -1,62 +1,4 @@
 models:
-  default:
-    - name: "FLUX.1 Dev FP8"
-      url: "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors"
-      path: "checkpoints/flux1-dev-fp8.safetensors"
-      min_size: 17000000000
-    - name: "Flux VAE (ae.safetensors)"
-      url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/vae/ae.safetensors"
-      path: "vae/ae.safetensors"
-      min_size: 335000000
-
-  common:
-    - name: "FLUX.1 Schnell FP8 (Apache 2.0)"
-      url: "https://huggingface.co/Comfy-Org/flux1-schnell/resolve/main/flux1-schnell-fp8.safetensors"
-      path: "checkpoints/flux1-schnell-fp8.safetensors"
-      min_size: 11900000000
-    - name: "SD VAE FT MSE"
-      url: "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
-      path: "vae/vae-ft-mse-840000-ema-pruned.safetensors"
-      min_size: 300000000
-    - name: "Flux VAE (ae.safetensors)"
-      url: "https://huggingface.co/black-forest-labs/FLUX.1-dev/resolve/main/vae/ae.safetensors"
-      path: "vae/ae.safetensors"
-      min_size: 335000000
-    - name: "Real-ESRGAN x4plus"
-      url: "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth"
-      path: "upscale_models/RealESRGAN_x4plus.pth"
-      min_size: 60000000
-    - name: "Real-ESRGAN x4plus Anime"
-      url: "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth"
-      path: "upscale_models/RealESRGAN_x4plus_anime_6B.pth"
-      min_size: 15000000
-    - name: "EasyNegative Embedding"
-      url: "https://huggingface.co/datasets/gsdf/EasyNegative/resolve/main/EasyNegative.safetensors"
-      path: "embeddings/EasyNegative.safetensors"
-      min_size: 20000
-    - name: "Flux Canny ControlNet V3"
-      url: "https://huggingface.co/XLabs-AI/flux-controlnet-canny-v3/resolve/main/flux-canny-controlnet-v3.safetensors"
-      path: "controlnet/flux-canny-controlnet-v3.safetensors"
-      min_size: 5500000000
-    - name: "Flux Depth ControlNet V3"
-      url: "https://huggingface.co/XLabs-AI/flux-controlnet-depth-v3/resolve/main/flux-depth-controlnet-v3.safetensors"
-      path: "controlnet/flux-depth-controlnet-v3.safetensors"
-      min_size: 5500000000
-
-  realistic:
-    - name: "Juggernaut XL v9 RunDiffusion Photo v2"
-      url: "https://huggingface.co/RunDiffusion/Juggernaut-XL-v9/resolve/main/Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
-      path: "checkpoints/Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors"
-      min_size: 6600000000
-    - name: "Juggernaut XL Lightning (5-7 steps)"
-      url: "https://huggingface.co/RunDiffusion/Juggernaut-XL-Lightning/resolve/main/juggernautXL_v9Rdphoto2Lightning.safetensors"
-      path: "checkpoints/juggernautXL_v9Rdphoto2Lightning.safetensors"
-      min_size: 6600000000
-    - name: "SD VAE FT MSE"
-      url: "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
-      path: "vae/vae-ft-mse-840000-ema-pruned.safetensors"
-      min_size: 300000000
-
   photorealistic:
     - name: "SD3.5 Medium FP8 (All-in-One)"
       url: "https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors"
@@ -70,24 +12,6 @@ models:
       url: "https://huggingface.co/XLabs-AI/flux-controlnet-hed-v3/resolve/main/flux-hed-controlnet-v3.safetensors"
       path: "controlnet/flux-hed-controlnet-v3.safetensors"
       min_size: 5500000000
-    - name: "SD VAE FT MSE"
-      url: "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
-      path: "vae/vae-ft-mse-840000-ema-pruned.safetensors"
-      min_size: 300000000
-
-  artistic:
-    - name: "FLUX.1 Schnell FP8 (Apache 2.0)"
-      url: "https://huggingface.co/Comfy-Org/flux1-schnell/resolve/main/flux1-schnell-fp8.safetensors"
-      path: "checkpoints/flux1-schnell-fp8.safetensors"
-      min_size: 11900000000
-    - name: "SD3.5 Medium FP8 (All-in-One)"
-      url: "https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors"
-      path: "checkpoints/sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors"
-      min_size: 8500000000
-    - name: "Flux Depth ControlNet Dev LoRA"
-      url: "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-depth-dev-lora.safetensors"
-      path: "loras/flux1-depth-dev-lora.safetensors"
-      min_size: 2000000000
     - name: "SD VAE FT MSE"
       url: "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
       path: "vae/vae-ft-mse-840000-ema-pruned.safetensors"

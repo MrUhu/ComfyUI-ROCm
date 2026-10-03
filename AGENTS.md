@@ -34,6 +34,10 @@ Docker-based deployment for [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 docker build -f Dockerfile -t comfyui-rocm:latest .
 ```
 
+The build script (`build.sh`) produces two tags:
+- **Simple version tag**: `comfyui-rocm:<version>` (e.g., `comfyui-rocm:v0.3.43`)
+- **Detailed tag**: `comfyui_<version>__<base_image_tag>` (e.g., `comfyui_v0.3.43__rocm10.0_ubuntu26.04_py3.14_pytorch_release_2.13.0`)
+
 ## Run Commands
 
 ```bash
@@ -56,7 +60,7 @@ docker exec comfyui-rocm python -c "import torch; print(torch.cuda.is_available(
 
 | Variable | Values | Default |
 |----------|--------|---------|
-| `MODEL_DOWNLOAD` | `default`, `common`, `realistic`, `photorealistic`, `artistic`, `all`, `none` | `default` |
+| `MODEL_DOWNLOAD` | `default`, `common`, `realistic`, `photorealistic`, `artistic`, `pixelart`, `all`, `none` | `default` |
 | `HIP_VISIBLE_DEVICES` | GPU index | `0` |
 | `CUDA_VISIBLE_DEVICES` | Must be empty for ROCm | `""` |
 
@@ -81,5 +85,5 @@ docker exec comfyui-rocm python -c "import torch; print(torch.cuda.is_available(
 - **ROCm requires `--device=/dev/kfd`** - standard `--gpus all` does NOT work for AMD GPUs
 - `CUDA_VISIBLE_DEVICES` must be empty string (`""`), not unset, to avoid PyTorch CUDA conflicts
 - Models directory structure: `/workspace/ComfyUI/models/{checkpoints,vae,loras,embeddings,upscale_models,controlnet}`
-- `requirements_rocm.txt` uses inline comments (`✅`, `❌`, `📦`) to mark package compatibility - respect these markers
-- The base image (`rocm/pytorch`) already includes torch, torchvision, numpy, scipy, tqdm, psufind, aiohttp, yarl, soundfile - do NOT reinstall these
+- Additional directories created by Dockerfile: `/workspace/ComfyUI/input`, `/workspace/ComfyUI/custom_nodes`, `/workspace/ComfyUI/output`
+- The base image (`rocm/pytorch`) pre-installs `numpy>=2.5.0` and `tqdm>=4.70.0` per `requirements_rocm.txt` comments - do NOT reinstall these

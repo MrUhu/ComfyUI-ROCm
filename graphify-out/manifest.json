@@ -60,15 +60,15 @@
     "semantic_hash": "9378bd03d56baaf78bd738ab3848f142"
   },
   "AGENTS.md": {
-    "mtime": 1791028012.9766233,
-    "seen": 1791029340.209882,
-    "ast_hash": "4451ced09dbcf7265d20acbd499e75e0",
+    "mtime": 1791050131.243504,
+    "seen": 1791050305.4156601,
+    "ast_hash": "267997a6014e649ab4169a2355832614",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1791036414.2150807,
-    "seen": 1791036537.021341,
-    "ast_hash": "c08571c15b818f8d4f49ca3462c709f9",
+    "mtime": 1791043164.8240445,
+    "seen": 1791043198.5753772,
+    "ast_hash": "4ce2d5fea43777b970f6c8c7d4b73b53",
     "semantic_hash": ""
   },
   "docker-compose.yaml": {
@@ -84,9 +84,9 @@
     "semantic_hash": ""
   },
   ".pre-commit-config.yaml": {
-    "mtime": 1790161178.6712086,
-    "seen": 1790161218.1913476,
-    "ast_hash": "07e4181fe447014d30cc3bb4a866f5c2",
+    "mtime": 1791057042.803487,
+    "seen": 1791057392.943418,
+    "ast_hash": "23f1974c3c2adc829f6a0efbb5492878",
     "semantic_hash": ""
   },
   "docs/architecture.md": {
@@ -119,12 +119,6 @@
     "ast_hash": "acabf0ad3577cbcf227da9ade6ecfbcb",
     "semantic_hash": ""
   },
-  "artifacts/comfyui/sample_workflow.json": {
-    "mtime": 1791021645.1642532,
-    "seen": 1791029340.2098572,
-    "ast_hash": "e427aa43396daa20fe72a6039905fc42",
-    "semantic_hash": ""
-  },
   "artifacts/workspace/download_models.py": {
     "mtime": 1791021645.1641731,
     "seen": 1791029340.2098596,
@@ -138,27 +132,15 @@
     "semantic_hash": ""
   },
   "artifacts/workspace/models.yaml": {
-    "mtime": 1791032804.521131,
-    "seen": 1791032825.1947691,
-    "ast_hash": "5f54d17f062a4e71d90aa4d6fe1fd503",
+    "mtime": 1791057117.114674,
+    "seen": 1791057392.9434397,
+    "ast_hash": "2dc75c73ea3b14c692c9119e68113b2d",
     "semantic_hash": ""
   },
   "artifacts/workspace/requirements_rocm.txt": {
     "mtime": 1791021645.164214,
     "seen": 1791029340.2098854,
     "ast_hash": "b2e6d157e2c0ac1aba34ee49771ae2e0",
-    "semantic_hash": ""
-  },
-  "artifacts/comfyui/artistic_workflow.json": {
-    "mtime": 1791033118.110556,
-    "seen": 1791036537.0213232,
-    "ast_hash": "85c9339988fb8a8aa5f04e511c877f16",
-    "semantic_hash": ""
-  },
-  "artifacts/comfyui/flux_dev_workflow.json": {
-    "mtime": 1791033114.7544544,
-    "seen": 1791036537.0213253,
-    "ast_hash": "0250bc4eee1902c15453fd8471b3fd30",
     "semantic_hash": ""
   },
   "artifacts/comfyui/photorealistic_workflow.json": {
@@ -171,12 +153,6 @@
     "mtime": 1791033119.2255898,
     "seen": 1791036537.021327,
     "ast_hash": "b403091d9b6178ce50a612b9e3646b69",
-    "semantic_hash": ""
-  },
-  "artifacts/comfyui/realistic_workflow.json": {
-    "mtime": 1791033115.8704882,
-    "seen": 1791036537.0213277,
-    "ast_hash": "ed73e73ad03cf4d2ec60072237d14dfd",
     "semantic_hash": ""
   }
 }
