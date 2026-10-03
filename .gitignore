@@ -47,6 +47,10 @@ env/
 # Logs
 *.log
 
+# temp plans/findings
+plans/
+findings/
+
 # Temporary files
 *.tmp
 *.bak

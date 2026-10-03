@@ -72,7 +72,7 @@ environment:
 
 To add custom models:
 
-1. Edit [`docker/models.yaml`](../docker/models.yaml)
+1. Edit [`artifacts/workspace/models.yaml`](../artifacts/workspace/models.yaml)
 2. Add entries under a new section or existing section
 3. Rebuild the image: `./build.sh`
 4. Run with `MODEL_DOWNLOAD=your_section_name`

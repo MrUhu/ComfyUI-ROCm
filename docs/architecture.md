@@ -90,13 +90,14 @@ rocm/pytorch:rocm10.0_ubuntu26.04_py3.14_pytorch_release_2.13.0
 
 ```
 ComfyUI-ROCm/
-├── docker/                           # Docker configuration
+├── artifacts/                        # Docker configuration
 │   ├── Dockerfile                    # Image definition
 │   ├── startup.sh                    # Container entrypoint
 │   ├── download_models.py            # Model download script
 │   ├── models.yaml                   # Model definitions
 │   ├── requirements_rocm.txt         # Python dependencies
-│   ├── sample_workflow.json          # Example workflow
+│   ├── comfyui/                      # ComfyUI files
+│   │   └── sample_workflow.json      # Example workflow
 │   └── .dockerignore
 ├── build.sh                          # Build script
 ├── docker-compose.yaml               # Docker Compose config
@@ -112,7 +113,7 @@ ComfyUI-ROCm/
 
 ## Key Components
 
-### [`docker/Dockerfile`](../docker/Dockerfile)
+### [`Dockerfile`](../Dockerfile)
 
 Defines the Docker image layers:
 1. Starts from `rocm/pytorch` base image
@@ -123,14 +124,14 @@ Defines the Docker image layers:
 6. Copies startup scripts and model config
 7. Sets health check and entrypoint
 
-### [`docker/startup.sh`](../docker/startup.sh)
+### [`artifacts/workspace/startup.sh`](../artifacts/workspace/startup.sh)
 
 Container entrypoint script:
 1. Runs `download_models.py` to fetch configured models
 2. Starts ComfyUI with `python main.py --listen 0.0.0.0 --port 8188`
 3. Passes through any additional arguments (`$@`)
 
-### [`docker/download_models.py`](../docker/download_models.py)
+### [`artifacts/workspace/download_models.py`](../artifacts/workspace/download_models.py)
 
 Model download manager:
 1. Reads `models.yaml` configuration
@@ -139,14 +140,14 @@ Model download manager:
 4. Validates file sizes against `min_size` thresholds
 5. Skips already downloaded models
 
-### [`docker/models.yaml`](../docker/models.yaml)
+### [`artifacts/workspace/models.yaml`](../artifacts/workspace/models.yaml)
 
 Model definitions in YAML format:
 - Organized by download mode (`default`, `common`, `realistic`, etc.)
 - Each model has: name, URL, path, minimum size
 - Paths are relative to `/workspace/ComfyUI/models/`
 
-### [`docker/requirements_rocm.txt`](../docker/requirements_rocm.txt)
+### [`artifacts/workspace/requirements_rocm.txt`](../artifacts/workspace/requirements_rocm.txt)
 
 Python package requirements with ROCm compatibility markers:
 - `✅` - Confirmed working on ROCm
@@ -275,7 +276,7 @@ docker exec -it comfyui-rocm git clone <node-repo> /workspace/ComfyUI/custom_nod
 ### Customizing the Build
 
 ```bash
-# Modify docker/Dockerfile for custom base image
+# Modify Dockerfile for custom base image
 # Add custom apt packages or pip installs
 # Rebuild: ./build.sh
 ```

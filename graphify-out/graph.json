@@ -4,19 +4,6 @@
   "graph": {
     "hyperedges": [
       {
-        "id": "comfyui_rocm_deployment_stack",
-        "label": "ComfyUI ROCm Deployment Stack",
-        "nodes": [
-          "docker_compose",
-          "docker_models",
-          "docker_requirements_rocm"
-        ],
-        "relation": "implement",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "docker-compose.yaml"
-      },
-      {
         "id": "graphify_pipeline_components",
         "label": "Graphify Extraction & Query Pipeline",
         "nodes": [
@@ -33,7 +20,7 @@
   },
   "nodes": [
     {
-      "id": "docker_download_models_download_file",
+      "id": "artifacts_workspace_download_models_download_file",
       "label": "download_file()",
       "_callable": true,
       "_origin": "ast",
@@ -41,11 +28,11 @@
       "community_name": "download_models.py",
       "file_type": "code",
       "norm_label": "download_file()",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L17"
     },
     {
-      "id": "docker_download_models_download_model_set",
+      "id": "artifacts_workspace_download_models_download_model_set",
       "label": "download_model_set()",
       "_callable": true,
       "_origin": "ast",
@@ -53,11 +40,11 @@
       "community_name": "download_models.py",
       "file_type": "code",
       "norm_label": "download_model_set()",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L69"
     },
     {
-      "id": "docker_download_models_load_models_config",
+      "id": "artifacts_workspace_download_models_load_models_config",
       "label": "load_models_config()",
       "_callable": true,
       "_origin": "ast",
@@ -65,11 +52,11 @@
       "community_name": "download_models.py",
       "file_type": "code",
       "norm_label": "load_models_config()",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L59"
     },
     {
-      "id": "docker_download_models_log",
+      "id": "artifacts_workspace_download_models_log",
       "label": "log()",
       "_callable": true,
       "_origin": "ast",
@@ -77,11 +64,11 @@
       "community_name": "download_models.py",
       "file_type": "code",
       "norm_label": "log()",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L13"
     },
     {
-      "id": "docker_download_models_main",
+      "id": "artifacts_workspace_download_models_main",
       "label": "main()",
       "_callable": true,
       "_origin": "ast",
@@ -89,7 +76,7 @@
       "community_name": "download_models.py",
       "file_type": "code",
       "norm_label": "main()",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L102"
     },
     {
@@ -105,14 +92,14 @@
       "source_location": "L9"
     },
     {
-      "id": "docker_download_models",
+      "id": "artifacts_workspace_download_models",
       "label": "download_models.py",
       "_origin": "ast",
       "community": 1,
       "community_name": "download_models.py",
       "file_type": "code",
       "norm_label": "download_models.py",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L1"
     },
     {
@@ -127,47 +114,47 @@
       "source_location": "L1"
     },
     {
-      "id": "docker_download_models_rationale_1",
+      "id": "artifacts_workspace_download_models_rationale_1",
       "label": "Smart model downloader for ComfyUI",
       "_origin": "ast",
       "community": 1,
       "community_name": "download_models.py",
       "file_type": "rationale",
       "norm_label": "smart model downloader for comfyui",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L1"
     },
     {
-      "id": "docker_download_models_rationale_18",
+      "id": "artifacts_workspace_download_models_rationale_18",
       "label": "Download file with progress bar and validation",
       "_origin": "ast",
       "community": 1,
       "community_name": "download_models.py",
       "file_type": "rationale",
       "norm_label": "download file with progress bar and validation",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L18"
     },
     {
-      "id": "docker_download_models_rationale_60",
+      "id": "artifacts_workspace_download_models_rationale_60",
       "label": "Load models configuration from YAML",
       "_origin": "ast",
       "community": 1,
       "community_name": "download_models.py",
       "file_type": "rationale",
       "norm_label": "load models configuration from yaml",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L60"
     },
     {
-      "id": "docker_download_models_rationale_70",
+      "id": "artifacts_workspace_download_models_rationale_70",
       "label": "Download a specific set of models",
       "_origin": "ast",
       "community": 1,
       "community_name": "download_models.py",
       "file_type": "rationale",
       "norm_label": "download a specific set of models",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L70"
     },
     {
@@ -182,6 +169,54 @@
       "source_location": "L2"
     },
     {
+      "id": "docs_architecture_artifacts_workspace_download_models_py_artifacts_workspace_download_models_py",
+      "label": "[`artifacts/workspace/download_models.py`](../artifacts/workspace/download_models.py)",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Key Components",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[`artifacts/workspace/download_models.py`](../artifacts/workspace/download_models.py)",
+      "source_file": "docs/architecture.md",
+      "source_location": "L134"
+    },
+    {
+      "id": "docs_architecture_artifacts_workspace_models_yaml_artifacts_workspace_models_yaml",
+      "label": "[`artifacts/workspace/models.yaml`](../artifacts/workspace/models.yaml)",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Key Components",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[`artifacts/workspace/models.yaml`](../artifacts/workspace/models.yaml)",
+      "source_file": "docs/architecture.md",
+      "source_location": "L143"
+    },
+    {
+      "id": "docs_architecture_artifacts_workspace_requirements_rocm_txt_artifacts_workspace_requirements_rocm_txt",
+      "label": "[`artifacts/workspace/requirements_rocm.txt`](../artifacts/workspace/requirements_rocm.txt)",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Key Components",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[`artifacts/workspace/requirements_rocm.txt`](../artifacts/workspace/requirements_rocm.txt)",
+      "source_file": "docs/architecture.md",
+      "source_location": "L150"
+    },
+    {
+      "id": "docs_architecture_artifacts_workspace_startup_sh_artifacts_workspace_startup_sh",
+      "label": "[`artifacts/workspace/startup.sh`](../artifacts/workspace/startup.sh)",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "Key Components",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[`artifacts/workspace/startup.sh`](../artifacts/workspace/startup.sh)",
+      "source_file": "docs/architecture.md",
+      "source_location": "L127"
+    },
+    {
       "id": "docs_architecture_docker_compose_yaml_docker_compose_yaml",
       "label": "[`docker-compose.yaml`](../docker-compose.yaml)",
       "_origin": "ast",
@@ -191,67 +226,19 @@
       "node_kind": "heading",
       "norm_label": "[`docker-compose.yaml`](../docker-compose.yaml)",
       "source_file": "docs/architecture.md",
-      "source_location": "L156"
+      "source_location": "L157"
     },
     {
-      "id": "docs_architecture_docker_dockerfile_docker_dockerfile",
-      "label": "[`docker/Dockerfile`](../docker/Dockerfile)",
+      "id": "docs_architecture_dockerfile_dockerfile",
+      "label": "[`Dockerfile`](../Dockerfile)",
       "_origin": "ast",
       "community": 10,
       "community_name": "Key Components",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "[`docker/dockerfile`](../docker/dockerfile)",
+      "norm_label": "[`dockerfile`](../dockerfile)",
       "source_file": "docs/architecture.md",
-      "source_location": "L115"
-    },
-    {
-      "id": "docs_architecture_docker_download_models_py_docker_download_models_py",
-      "label": "[`docker/download_models.py`](../docker/download_models.py)",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "Key Components",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[`docker/download_models.py`](../docker/download_models.py)",
-      "source_file": "docs/architecture.md",
-      "source_location": "L133"
-    },
-    {
-      "id": "docs_architecture_docker_models_yaml_docker_models_yaml",
-      "label": "[`docker/models.yaml`](../docker/models.yaml)",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "Key Components",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[`docker/models.yaml`](../docker/models.yaml)",
-      "source_file": "docs/architecture.md",
-      "source_location": "L142"
-    },
-    {
-      "id": "docs_architecture_docker_requirements_rocm_txt_docker_requirements_rocm_txt",
-      "label": "[`docker/requirements_rocm.txt`](../docker/requirements_rocm.txt)",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "Key Components",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[`docker/requirements_rocm.txt`](../docker/requirements_rocm.txt)",
-      "source_file": "docs/architecture.md",
-      "source_location": "L149"
-    },
-    {
-      "id": "docs_architecture_docker_startup_sh_docker_startup_sh",
-      "label": "[`docker/startup.sh`](../docker/startup.sh)",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "Key Components",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "[`docker/startup.sh`](../docker/startup.sh)",
-      "source_file": "docs/architecture.md",
-      "source_location": "L126"
+      "source_location": "L116"
     },
     {
       "id": "docs_architecture_key_components",
@@ -263,7 +250,7 @@
       "node_kind": "heading",
       "norm_label": "key components",
       "source_file": "docs/architecture.md",
-      "source_location": "L113"
+      "source_location": "L114"
     },
     {
       "id": "docs_usage_container_management",
@@ -326,6 +313,51 @@
       "source_location": "L133"
     },
     {
+      "id": "artifacts_workspace_startup",
+      "label": "startup.sh",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "startup.sh",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "norm_label": "startup.sh",
+      "source_file": "artifacts/workspace/startup.sh",
+      "source_location": "L1"
+    },
+    {
+      "id": "artifacts_workspace_startup_log",
+      "label": "log()",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "startup.sh",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_function"
+      },
+      "norm_label": "log()",
+      "source_file": "artifacts/workspace/startup.sh",
+      "source_location": "L6"
+    },
+    {
+      "id": "artifacts_workspace_startup_sh__entry",
+      "label": "startup.sh script",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "startup.sh",
+      "file_type": "code",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "norm_label": "startup.sh script",
+      "source_file": "artifacts/workspace/startup.sh",
+      "source_location": "L1"
+    },
+    {
       "id": "docs_architecture_adding_custom_models",
       "label": "Adding Custom Models",
       "_origin": "ast",
@@ -335,7 +367,7 @@
       "node_kind": "heading",
       "norm_label": "adding custom models",
       "source_file": "docs/architecture.md",
-      "source_location": "L266"
+      "source_location": "L267"
     },
     {
       "id": "docs_architecture_adding_custom_nodes",
@@ -347,7 +379,7 @@
       "node_kind": "heading",
       "norm_label": "adding custom nodes",
       "source_file": "docs/architecture.md",
-      "source_location": "L255"
+      "source_location": "L256"
     },
     {
       "id": "docs_architecture_architecture_documentation",
@@ -395,7 +427,7 @@
       "node_kind": "heading",
       "norm_label": "customizing the build",
       "source_file": "docs/architecture.md",
-      "source_location": "L275"
+      "source_location": "L276"
     },
     {
       "id": "docs_architecture_data_flow",
@@ -407,7 +439,7 @@
       "node_kind": "heading",
       "norm_label": "data flow",
       "source_file": "docs/architecture.md",
-      "source_location": "L164"
+      "source_location": "L165"
     },
     {
       "id": "docs_architecture_dependency_chain",
@@ -419,7 +451,7 @@
       "node_kind": "heading",
       "norm_label": "dependency chain",
       "source_file": "docs/architecture.md",
-      "source_location": "L222"
+      "source_location": "L223"
     },
     {
       "id": "docs_architecture_extending_the_architecture",
@@ -431,7 +463,7 @@
       "node_kind": "heading",
       "norm_label": "extending the architecture",
       "source_file": "docs/architecture.md",
-      "source_location": "L253"
+      "source_location": "L254"
     },
     {
       "id": "docs_architecture_file_structure",
@@ -479,7 +511,7 @@
       "node_kind": "heading",
       "norm_label": "model download flow",
       "source_file": "docs/architecture.md",
-      "source_location": "L166"
+      "source_location": "L167"
     },
     {
       "id": "docs_architecture_next_steps",
@@ -491,7 +523,7 @@
       "node_kind": "heading",
       "norm_label": "next steps",
       "source_file": "docs/architecture.md",
-      "source_location": "L283"
+      "source_location": "L284"
     },
     {
       "id": "docs_architecture_project_structure_host",
@@ -515,7 +547,7 @@
       "node_kind": "heading",
       "norm_label": "request flow",
       "source_file": "docs/architecture.md",
-      "source_location": "L194"
+      "source_location": "L195"
     },
     {
       "id": "docs_architecture_security_considerations",
@@ -527,7 +559,7 @@
       "node_kind": "heading",
       "norm_label": "security considerations",
       "source_file": "docs/architecture.md",
-      "source_location": "L244"
+      "source_location": "L245"
     },
     {
       "id": "docs_architecture_system_architecture",
@@ -540,18 +572,6 @@
       "norm_label": "system architecture",
       "source_file": "docs/architecture.md",
       "source_location": "L3"
-    },
-    {
-      "id": "docs_usage_access_the_interface",
-      "label": "Access the Interface",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "Usage Guide",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "access the interface",
-      "source_file": "docs/usage.md",
-      "source_location": "L23"
     },
     {
       "id": "docs_usage_common_issues",
@@ -588,30 +608,6 @@
       "norm_label": "debug mode",
       "source_file": "docs/usage.md",
       "source_location": "L200"
-    },
-    {
-      "id": "docs_usage_docker_compose",
-      "label": "Docker Compose",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "Usage Guide",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "docker compose",
-      "source_file": "docs/usage.md",
-      "source_location": "L17"
-    },
-    {
-      "id": "docs_usage_docker_run",
-      "label": "Docker Run",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "Usage Guide",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "docker run",
-      "source_file": "docs/usage.md",
-      "source_location": "L5"
     },
     {
       "id": "docs_usage_environment_variables",
@@ -746,18 +742,6 @@
       "source_location": "L102"
     },
     {
-      "id": "docs_usage_running_comfyui",
-      "label": "Running ComfyUI",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "Usage Guide",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "running comfyui",
-      "source_file": "docs/usage.md",
-      "source_location": "L3"
-    },
-    {
       "id": "docs_usage_setting_environment_variables",
       "label": "Setting Environment Variables",
       "_origin": "ast",
@@ -830,49 +814,52 @@
       "source_location": "L176"
     },
     {
-      "id": "docker_startup",
-      "label": "startup.sh",
+      "id": "docs_usage_access_the_interface",
+      "label": "Access the Interface",
       "_origin": "ast",
       "community": 5,
-      "community_name": "startup.sh",
-      "file_type": "code",
-      "metadata": {
-        "language": "bash",
-        "kind": "file"
-      },
-      "norm_label": "startup.sh",
-      "source_file": "docker/startup.sh",
-      "source_location": "L1"
+      "community_name": "Running ComfyUI",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "access the interface",
+      "source_file": "docs/usage.md",
+      "source_location": "L23"
     },
     {
-      "id": "docker_startup_log",
-      "label": "log()",
+      "id": "docs_usage_docker_compose",
+      "label": "Docker Compose",
       "_origin": "ast",
       "community": 5,
-      "community_name": "startup.sh",
-      "file_type": "code",
-      "metadata": {
-        "language": "bash",
-        "kind": "bash_function"
-      },
-      "norm_label": "log()",
-      "source_file": "docker/startup.sh",
-      "source_location": "L6"
+      "community_name": "Running ComfyUI",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "docker compose",
+      "source_file": "docs/usage.md",
+      "source_location": "L17"
     },
     {
-      "id": "docker_startup_sh__entry",
-      "label": "startup.sh script",
+      "id": "docs_usage_docker_run",
+      "label": "Docker Run",
       "_origin": "ast",
       "community": 5,
-      "community_name": "startup.sh",
-      "file_type": "code",
-      "metadata": {
-        "language": "bash",
-        "kind": "bash_entrypoint"
-      },
-      "norm_label": "startup.sh script",
-      "source_file": "docker/startup.sh",
-      "source_location": "L1"
+      "community_name": "Running ComfyUI",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "docker run",
+      "source_file": "docs/usage.md",
+      "source_location": "L5"
+    },
+    {
+      "id": "docs_usage_running_comfyui",
+      "label": "Running ComfyUI",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "Running ComfyUI",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "running comfyui",
+      "source_file": "docs/usage.md",
+      "source_location": "L3"
     },
     {
       "id": "build",
@@ -1193,6 +1180,30 @@
       "source_location": "L74"
     },
     {
+      "id": "docs_architecture",
+      "label": "architecture.md",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ComfyUI ROCm - Project Overview",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "architecture.md",
+      "source_file": "docs/architecture.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_overview",
+      "label": "overview.md",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "ComfyUI ROCm - Project Overview",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "overview.md",
+      "source_file": "docs/overview.md",
+      "source_location": "L1"
+    },
+    {
       "id": "docs_overview_comfyui_rocm_project_overview",
       "label": "ComfyUI ROCm - Project Overview",
       "_origin": "ast",
@@ -1226,7 +1237,7 @@
       "node_kind": "heading",
       "norm_label": "license",
       "source_file": "docs/overview.md",
-      "source_location": "L66"
+      "source_location": "L68"
     },
     {
       "id": "docs_overview_project_structure",
@@ -1262,7 +1273,7 @@
       "node_kind": "heading",
       "norm_label": "third-party components",
       "source_file": "docs/overview.md",
-      "source_location": "L70"
+      "source_location": "L72"
     },
     {
       "id": "docs_overview_version_information",
@@ -1301,35 +1312,11 @@
       "source_location": "L7"
     },
     {
-      "id": "docs_architecture",
-      "label": "architecture.md",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "architecture.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "architecture.md",
-      "source_file": "docs/architecture.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "docs_overview",
-      "label": "overview.md",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "architecture.md",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "overview.md",
-      "source_file": "docs/overview.md",
-      "source_location": "L1"
-    },
-    {
       "id": "docs_setup",
       "label": "setup.md",
       "_origin": "ast",
-      "community": 9,
-      "community_name": "architecture.md",
+      "community": 8,
+      "community_name": "ComfyUI ROCm - Project Overview",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "setup.md",
@@ -1340,8 +1327,8 @@
       "id": "docs_usage",
       "label": "usage.md",
       "_origin": "ast",
-      "community": 9,
-      "community_name": "architecture.md",
+      "community": 8,
+      "community_name": "ComfyUI ROCm - Project Overview",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "usage.md",
@@ -1499,6 +1486,21 @@
       "source_url": null
     },
     {
+      "id": "model_download_config",
+      "label": "Model Download Configuration",
+      "_origin": "semantic",
+      "author": null,
+      "captured_at": null,
+      "community": 14,
+      "community_name": "Model Download Configuration",
+      "contributor": null,
+      "file_type": "concept",
+      "norm_label": "model download configuration",
+      "source_file": null,
+      "source_location": null,
+      "source_url": null
+    },
+    {
       "id": "docker_compose",
       "label": "docker-compose.yaml",
       "_origin": "semantic",
@@ -1560,21 +1562,6 @@
       "source_url": null
     },
     {
-      "id": "model_download_config",
-      "label": "Model Download Configuration",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 2,
-      "community_name": "ComfyUI ROCm Docker Project",
-      "contributor": null,
-      "file_type": "concept",
-      "norm_label": "model download configuration",
-      "source_file": null,
-      "source_location": null,
-      "source_url": null
-    },
-    {
       "id": "agents",
       "label": "AGENTS.md",
       "_origin": "semantic",
@@ -1586,21 +1573,6 @@
       "file_type": "document",
       "norm_label": "agents.md",
       "source_file": "AGENTS.md",
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "docker_models",
-      "label": "models.yaml",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 2,
-      "community_name": "ComfyUI ROCm Docker Project",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "models.yaml",
-      "source_file": "docker/models.yaml",
       "source_location": null,
       "source_url": null
     },
@@ -1641,26 +1613,11 @@
       "author": null,
       "captured_at": null,
       "community": 9,
-      "community_name": "architecture.md",
+      "community_name": "Python ROCm Requirements",
       "contributor": null,
       "file_type": "concept",
       "norm_label": "python rocm requirements",
       "source_file": null,
-      "source_location": null,
-      "source_url": null
-    },
-    {
-      "id": "docker_requirements_rocm",
-      "label": "requirements_rocm.txt",
-      "_origin": "semantic",
-      "author": null,
-      "captured_at": null,
-      "community": 9,
-      "community_name": "architecture.md",
-      "contributor": null,
-      "file_type": "document",
-      "norm_label": "requirements_rocm.txt",
-      "source_file": "docker/requirements_rocm.txt",
       "source_location": null,
       "source_url": null
     },
@@ -1751,158 +1708,158 @@
   ],
   "links": [
     {
-      "source": "docker_download_models_download_file",
-      "target": "docker_download_models_log",
+      "source": "artifacts_workspace_download_models_download_file",
+      "target": "artifacts_workspace_download_models_log",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L21",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models_download_model_set",
-      "target": "docker_download_models_log",
+      "source": "artifacts_workspace_download_models_download_model_set",
+      "target": "artifacts_workspace_download_models_log",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L73",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models_download_model_set",
-      "target": "docker_download_models_download_model_set",
+      "source": "artifacts_workspace_download_models_download_model_set",
+      "target": "artifacts_workspace_download_models_download_model_set",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L78",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models_download_model_set",
-      "target": "docker_download_models_download_file",
+      "source": "artifacts_workspace_download_models_download_model_set",
+      "target": "artifacts_workspace_download_models_download_file",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L95",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models_load_models_config",
-      "target": "docker_download_models_log",
+      "source": "artifacts_workspace_download_models_load_models_config",
+      "target": "artifacts_workspace_download_models_log",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L65",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models_main",
-      "target": "docker_download_models_log",
+      "source": "artifacts_workspace_download_models_main",
+      "target": "artifacts_workspace_download_models_log",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L107",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models_main",
-      "target": "docker_download_models_load_models_config",
+      "source": "artifacts_workspace_download_models_main",
+      "target": "artifacts_workspace_download_models_load_models_config",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L125",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models_main",
-      "target": "docker_download_models_download_model_set",
+      "source": "artifacts_workspace_download_models_main",
+      "target": "artifacts_workspace_download_models_download_model_set",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L131",
       "weight": 1.0
     },
     {
-      "source": "docker_startup_sh__entry",
-      "target": "docker_startup_log",
+      "source": "artifacts_workspace_startup_sh__entry",
+      "target": "artifacts_workspace_startup_log",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
-      "source_file": "docker/startup.sh",
+      "source_file": "artifacts/workspace/startup.sh",
       "source_location": "L14",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models",
+      "source": "artifacts_workspace_download_models",
       "target": "yaml",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L10",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models",
+      "source": "artifacts_workspace_download_models",
       "target": "os",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L5",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models",
+      "source": "artifacts_workspace_download_models",
       "target": "sys",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L6",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models",
+      "source": "artifacts_workspace_download_models",
       "target": "requests",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L9",
       "weight": 1.0
     },
@@ -1943,15 +1900,81 @@
       "weight": 1.0
     },
     {
-      "source": "docker_download_models",
+      "source": "artifacts_workspace_download_models",
       "target": "pathlib",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "artifacts_workspace_download_models",
+      "target": "artifacts_workspace_download_models_main",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "artifacts/workspace/download_models.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "artifacts_workspace_download_models",
+      "target": "artifacts_workspace_download_models_log",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "artifacts/workspace/download_models.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "artifacts_workspace_download_models",
+      "target": "artifacts_workspace_download_models_download_file",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "artifacts/workspace/download_models.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "artifacts_workspace_download_models",
+      "target": "artifacts_workspace_download_models_load_models_config",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "artifacts/workspace/download_models.py",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "artifacts_workspace_download_models",
+      "target": "artifacts_workspace_download_models_download_model_set",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "artifacts/workspace/download_models.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "artifacts_workspace_startup",
+      "target": "artifacts_workspace_startup_sh__entry",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "artifacts/workspace/startup.sh",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -1962,72 +1985,6 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "build.sh",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "docker_download_models",
-      "target": "docker_download_models_main",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker/download_models.py",
-      "source_location": "L102",
-      "weight": 1.0
-    },
-    {
-      "source": "docker_download_models",
-      "target": "docker_download_models_log",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker/download_models.py",
-      "source_location": "L13",
-      "weight": 1.0
-    },
-    {
-      "source": "docker_download_models",
-      "target": "docker_download_models_download_file",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker/download_models.py",
-      "source_location": "L17",
-      "weight": 1.0
-    },
-    {
-      "source": "docker_download_models",
-      "target": "docker_download_models_load_models_config",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker/download_models.py",
-      "source_location": "L59",
-      "weight": 1.0
-    },
-    {
-      "source": "docker_download_models",
-      "target": "docker_download_models_download_model_set",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker/download_models.py",
-      "source_location": "L69",
-      "weight": 1.0
-    },
-    {
-      "source": "docker_startup",
-      "target": "docker_startup_sh__entry",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker/startup.sh",
       "source_location": "L1",
       "weight": 1.0
     },
@@ -2050,7 +2007,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L113",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -2061,7 +2018,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L164",
+      "source_location": "L165",
       "weight": 1.0
     },
     {
@@ -2083,7 +2040,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L222",
+      "source_location": "L223",
       "weight": 1.0
     },
     {
@@ -2094,7 +2051,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L244",
+      "source_location": "L245",
       "weight": 1.0
     },
     {
@@ -2105,7 +2062,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L253",
+      "source_location": "L254",
       "weight": 1.0
     },
     {
@@ -2116,7 +2073,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L283",
+      "source_location": "L284",
       "weight": 1.0
     },
     {
@@ -2171,7 +2128,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L166",
+      "source_location": "L167",
       "weight": 1.0
     },
     {
@@ -2182,7 +2139,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L194",
+      "source_location": "L195",
       "weight": 1.0
     },
     {
@@ -2193,7 +2150,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L255",
+      "source_location": "L256",
       "weight": 1.0
     },
     {
@@ -2204,7 +2161,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L266",
+      "source_location": "L267",
       "weight": 1.0
     },
     {
@@ -2215,7 +2172,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L275",
+      "source_location": "L276",
       "weight": 1.0
     },
     {
@@ -2242,57 +2199,57 @@
     },
     {
       "source": "docs_architecture_key_components",
-      "target": "docs_architecture_docker_dockerfile_docker_dockerfile",
+      "target": "docs_architecture_dockerfile_dockerfile",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L115",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_key_components",
-      "target": "docs_architecture_docker_startup_sh_docker_startup_sh",
+      "target": "docs_architecture_artifacts_workspace_startup_sh_artifacts_workspace_startup_sh",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L126",
+      "source_location": "L127",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_key_components",
-      "target": "docs_architecture_docker_download_models_py_docker_download_models_py",
+      "target": "docs_architecture_artifacts_workspace_download_models_py_artifacts_workspace_download_models_py",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L133",
+      "source_location": "L134",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_key_components",
-      "target": "docs_architecture_docker_models_yaml_docker_models_yaml",
+      "target": "docs_architecture_artifacts_workspace_models_yaml_artifacts_workspace_models_yaml",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L142",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
       "source": "docs_architecture_key_components",
-      "target": "docs_architecture_docker_requirements_rocm_txt_docker_requirements_rocm_txt",
+      "target": "docs_architecture_artifacts_workspace_requirements_rocm_txt_artifacts_workspace_requirements_rocm_txt",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L149",
+      "source_location": "L150",
       "weight": 1.0
     },
     {
@@ -2303,7 +2260,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
-      "source_location": "L156",
+      "source_location": "L157",
       "weight": 1.0
     },
     {
@@ -2380,7 +2337,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/overview.md",
-      "source_location": "L66",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -2402,7 +2359,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/overview.md",
-      "source_location": "L70",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -3000,57 +2957,57 @@
       "weight": 1.0
     },
     {
-      "source": "docker_startup",
-      "target": "docker_startup_log",
+      "source": "artifacts_workspace_startup",
+      "target": "artifacts_workspace_startup_log",
       "relation": "defines",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "docker/startup.sh",
+      "source_file": "artifacts/workspace/startup.sh",
       "source_location": "L6",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models_rationale_1",
-      "target": "docker_download_models",
+      "source": "artifacts_workspace_download_models_rationale_1",
+      "target": "artifacts_workspace_download_models",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L1",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models_rationale_18",
-      "target": "docker_download_models_download_file",
+      "source": "artifacts_workspace_download_models_rationale_18",
+      "target": "artifacts_workspace_download_models_download_file",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L18",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models_rationale_60",
-      "target": "docker_download_models_load_models_config",
+      "source": "artifacts_workspace_download_models_rationale_60",
+      "target": "artifacts_workspace_download_models_load_models_config",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L60",
       "weight": 1.0
     },
     {
-      "source": "docker_download_models_rationale_70",
-      "target": "docker_download_models_download_model_set",
+      "source": "artifacts_workspace_download_models_rationale_70",
+      "target": "artifacts_workspace_download_models_download_model_set",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "docker/download_models.py",
+      "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L70",
       "weight": 1.0
     },
@@ -3067,29 +3024,7 @@
     },
     {
       "source": "docs_architecture",
-      "target": "docker_requirements_rocm",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/architecture.md",
-      "source_location": "L149",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_architecture",
       "target": "docs_overview",
-      "relation": "references",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/architecture.md",
-      "source_location": "L285",
-      "weight": 1.0
-    },
-    {
-      "source": "docs_architecture",
-      "target": "docs_setup",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3100,13 +3035,24 @@
     },
     {
       "source": "docs_architecture",
-      "target": "docs_usage",
+      "target": "docs_setup",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/architecture.md",
       "source_location": "L287",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_architecture",
+      "target": "docs_usage",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture.md",
+      "source_location": "L288",
       "weight": 1.0
     },
     {
@@ -3183,28 +3129,6 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docker-compose.yaml",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "docker_models",
-      "target": "model_download_config",
-      "relation": "references",
-      "_origin": "semantic",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker/models.yaml",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "docker_requirements_rocm",
-      "target": "python_requirements",
-      "relation": "references",
-      "_origin": "semantic",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker/requirements_rocm.txt",
       "source_location": null,
       "weight": 1.0
     },
@@ -3339,44 +3263,9 @@
       "source_file": "docker-compose.yaml",
       "source_location": null,
       "weight": 1.0
-    },
-    {
-      "source": "comfyui_rocm_docker",
-      "target": "model_download_config",
-      "relation": "shares_data_with",
-      "_origin": "semantic",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker/models.yaml",
-      "source_location": null,
-      "weight": 1.0
-    },
-    {
-      "source": "comfyui_rocm_docker",
-      "target": "python_requirements",
-      "relation": "shares_data_with",
-      "_origin": "semantic",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker/requirements_rocm.txt",
-      "source_location": null,
-      "weight": 1.0
     }
   ],
   "hyperedges": [
-    {
-      "id": "comfyui_rocm_deployment_stack",
-      "label": "ComfyUI ROCm Deployment Stack",
-      "nodes": [
-        "docker_compose",
-        "docker_models",
-        "docker_requirements_rocm"
-      ],
-      "relation": "implement",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docker-compose.yaml"
-    },
     {
       "id": "graphify_pipeline_components",
       "label": "Graphify Extraction & Query Pipeline",
@@ -3391,5 +3280,5 @@
       "source_file": ".roo/skills-knowledge/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "669c14be9a65886377adcd1e0befcedd4e539806"
+  "built_at_commit": "35e4ec66e6c2d4ab415b8ace7b229ae53f42cf67"
 }

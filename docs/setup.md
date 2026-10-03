@@ -85,7 +85,7 @@ chmod +x build.sh
 ### Direct Docker Build
 
 ```bash
-docker build -f docker/Dockerfile -t comfyui-rocm:latest .
+docker build -f Dockerfile -t comfyui-rocm:latest .
 ```
 
 ### Build Time Expectations
@@ -175,7 +175,7 @@ docker run --rm --device=/dev/kfd --device=/dev/dri ubuntu ls /dev/kfd /dev/dri
 
 ```bash
 # Clear Docker cache and rebuild
-docker build --no-cache -f docker/Dockerfile -t comfyui-rocm:latest .
+docker build --no-cache -f Dockerfile -t comfyui-rocm:latest .
 
 # Check disk space
 df -h /var/lib/docker

@@ -19,7 +19,7 @@ Run `git add . && pre-commit run --all-files` whenever a modification happend.
 
 ## Project Overview
 
-Docker-based deployment for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) with AMD ROCm GPU support. This is a **Docker image project**, not a traditional codebase. The `docker/` directory contains the Dockerfile, startup scripts, and model configuration.
+Docker-based deployment for [ComfyUI](https://github.com/comfyanonymous/ComfyUI) with AMD ROCm GPU support. This is a **Docker image project**, not a traditional codebase. The `artifacts/` directory contains the Dockerfile, startup scripts, and model configuration.
 
 ## Build Commands
 
@@ -31,7 +31,7 @@ Docker-based deployment for [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 ./build.sh v0.3.43
 
 # Direct docker build
-docker build -f docker/Dockerfile -t comfyui-rocm:latest .
+docker build -f Dockerfile -t comfyui-rocm:latest .
 ```
 
 ## Run Commands

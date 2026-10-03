@@ -13,16 +13,16 @@
       "roo_skills_knowledge_graphify_skill"
     ],
     "1": [
-      "docker_download_models",
-      "docker_download_models_download_file",
-      "docker_download_models_download_model_set",
-      "docker_download_models_load_models_config",
-      "docker_download_models_log",
-      "docker_download_models_main",
-      "docker_download_models_rationale_1",
-      "docker_download_models_rationale_18",
-      "docker_download_models_rationale_60",
-      "docker_download_models_rationale_70",
+      "artifacts_workspace_download_models",
+      "artifacts_workspace_download_models_download_file",
+      "artifacts_workspace_download_models_download_model_set",
+      "artifacts_workspace_download_models_load_models_config",
+      "artifacts_workspace_download_models_log",
+      "artifacts_workspace_download_models_main",
+      "artifacts_workspace_download_models_rationale_1",
+      "artifacts_workspace_download_models_rationale_18",
+      "artifacts_workspace_download_models_rationale_60",
+      "artifacts_workspace_download_models_rationale_70",
       "os",
       "pathlib",
       "pre_commit_hooks_graphify_sync",
@@ -39,8 +39,6 @@
       "comfyui_rocm_docker",
       "docker_compose",
       "docker_compose_service",
-      "docker_models",
-      "model_download_config",
       "readme",
       "screenshot"
     ],
@@ -65,12 +63,9 @@
       "docs_architecture_system_architecture"
     ],
     "4": [
-      "docs_usage_access_the_interface",
       "docs_usage_common_issues",
       "docs_usage_custom_model_downloads",
       "docs_usage_debug_mode",
-      "docs_usage_docker_compose",
-      "docs_usage_docker_run",
       "docs_usage_environment_variables",
       "docs_usage_health_check",
       "docs_usage_model_directory_structure",
@@ -82,7 +77,6 @@
       "docs_usage_pull_latest_image",
       "docs_usage_rebuild_from_source",
       "docs_usage_recommended_docker_compose_volumes",
-      "docs_usage_running_comfyui",
       "docs_usage_setting_environment_variables",
       "docs_usage_troubleshooting",
       "docs_usage_updating",
@@ -91,9 +85,10 @@
       "docs_usage_vram_management"
     ],
     "5": [
-      "docker_startup",
-      "docker_startup_log",
-      "docker_startup_sh__entry"
+      "docs_usage_access_the_interface",
+      "docs_usage_docker_compose",
+      "docs_usage_docker_run",
+      "docs_usage_running_comfyui"
     ],
     "6": [
       "build",
@@ -126,6 +121,8 @@
       "docs_setup_using_build_sh_recommended"
     ],
     "8": [
+      "docs_architecture",
+      "docs_overview",
       "docs_overview_comfyui_rocm_project_overview",
       "docs_overview_key_features",
       "docs_overview_license",
@@ -134,23 +131,20 @@
       "docs_overview_third_party_components",
       "docs_overview_version_information",
       "docs_overview_what_is_this_project",
-      "docs_overview_why_rocm"
+      "docs_overview_why_rocm",
+      "docs_setup",
+      "docs_usage"
     ],
     "9": [
-      "docker_requirements_rocm",
-      "docs_architecture",
-      "docs_overview",
-      "docs_setup",
-      "docs_usage",
       "python_requirements"
     ],
     "10": [
+      "docs_architecture_artifacts_workspace_download_models_py_artifacts_workspace_download_models_py",
+      "docs_architecture_artifacts_workspace_models_yaml_artifacts_workspace_models_yaml",
+      "docs_architecture_artifacts_workspace_requirements_rocm_txt_artifacts_workspace_requirements_rocm_txt",
+      "docs_architecture_artifacts_workspace_startup_sh_artifacts_workspace_startup_sh",
       "docs_architecture_docker_compose_yaml_docker_compose_yaml",
-      "docs_architecture_docker_dockerfile_docker_dockerfile",
-      "docs_architecture_docker_download_models_py_docker_download_models_py",
-      "docs_architecture_docker_models_yaml_docker_models_yaml",
-      "docs_architecture_docker_requirements_rocm_txt_docker_requirements_rocm_txt",
-      "docs_architecture_docker_startup_sh_docker_startup_sh",
+      "docs_architecture_dockerfile_dockerfile",
       "docs_architecture_key_components"
     ],
     "11": [
@@ -162,22 +156,32 @@
     ],
     "12": [
       "urllib_parse"
+    ],
+    "13": [
+      "artifacts_workspace_startup",
+      "artifacts_workspace_startup_log",
+      "artifacts_workspace_startup_sh__entry"
+    ],
+    "14": [
+      "model_download_config"
     ]
   },
   "cohesion": {
     "0": 0.2,
     "1": 0.15204678362573099,
-    "2": 0.25,
+    "2": 0.3333333333333333,
     "3": 0.1111111111111111,
-    "4": 0.08333333333333333,
-    "5": 1.0,
+    "4": 0.1,
+    "5": 0.5,
     "6": 1.0,
     "7": 0.08333333333333333,
-    "8": 0.2222222222222222,
-    "9": 0.5333333333333333,
+    "8": 0.19230769230769232,
+    "9": 1.0,
     "10": 0.2857142857142857,
     "11": 0.4,
-    "12": 1.0
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0
   },
   "gods": [
     {
@@ -201,7 +205,7 @@
       "degree": 9
     },
     {
-      "id": "docker_download_models_download_model_set",
+      "id": "artifacts_workspace_download_models_download_model_set",
       "label": "download_model_set()",
       "degree": 7
     },
@@ -211,7 +215,7 @@
       "degree": 7
     },
     {
-      "id": "docker_download_models_log",
+      "id": "artifacts_workspace_download_models_log",
       "label": "log()",
       "degree": 5
     },
@@ -226,43 +230,31 @@
       "degree": 5
     },
     {
-      "id": "docker_download_models_download_file",
+      "id": "artifacts_workspace_download_models_download_file",
       "label": "download_file()",
       "degree": 4
     }
   ],
-  "surprises": [
-    {
-      "source": "ComfyUI ROCm Docker Project",
-      "target": "Python ROCm Requirements",
-      "source_files": [
-        null,
-        null
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "shares_data_with",
-      "note": "Bridges community 2 → community 9"
-    }
-  ],
+  "surprises": [],
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `Usage Guide` connect `Usage Guide` to `architecture.md`, `Container Management`?",
-      "why": "High betweenness centrality (0.260) - this node is a cross-community bridge."
+      "question": "Why does `Usage Guide` connect `Usage Guide` to `ComfyUI ROCm - Project Overview`, `Container Management`, `Running ComfyUI`?",
+      "why": "High betweenness centrality (0.233) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `Architecture Documentation` connect `Architecture Documentation` to `architecture.md`, `Key Components`?",
-      "why": "High betweenness centrality (0.227) - this node is a cross-community bridge."
+      "question": "Why does `Architecture Documentation` connect `Architecture Documentation` to `ComfyUI ROCm - Project Overview`, `Key Components`?",
+      "why": "High betweenness centrality (0.205) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
-      "question": "Why does `Setup Instructions` connect `Setup Instructions` to `architecture.md`?",
-      "why": "High betweenness centrality (0.220) - this node is a cross-community bridge."
+      "question": "Why does `Setup Instructions` connect `Setup Instructions` to `ComfyUI ROCm - Project Overview`?",
+      "why": "High betweenness centrality (0.198) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
-      "question": "What connects `[`docker-compose.yaml`](../docker-compose.yaml)`, `[`docker/Dockerfile`](../docker/Dockerfile)`, `[`docker/download_models.py`](../docker/download_models.py)` to the rest of the system?",
+      "question": "What connects `[`artifacts/workspace/download_models.py`](../artifacts/workspace/download_models.py)`, `[`artifacts/workspace/models.yaml`](../artifacts/workspace/models.yaml)`, `[`artifacts/workspace/requirements_rocm.txt`](../artifacts/workspace/requirements_rocm.txt)` to the rest of the system?",
       "why": "66 weakly-connected nodes found - possible documentation gaps or missing edges."
     },
     {
@@ -273,7 +265,7 @@
     {
       "type": "low_cohesion",
       "question": "Should `Usage Guide` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.1 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",

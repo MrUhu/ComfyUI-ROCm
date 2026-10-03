@@ -45,13 +45,15 @@ ComfyUI is traditionally designed for NVIDIA GPUs with CUDA support. This projec
 
 ```
 ComfyUI-ROCm/
-├── docker/                          # Docker configuration
+├── artifacts/                       # Docker configuration
 │   ├── Dockerfile                   # Image definition
-│   ├── startup.sh                   # Container entrypoint
-│   ├── download_models.py           # Model download script
-│   ├── models.yaml                  # Model definitions
-│   ├── requirements_rocm.txt        # Python dependencies
-│   └── sample_workflow.json         # Example ComfyUI workflow
+│   ├── workspace/                   # Workspace files
+│   │   ├── startup.sh               # Container entrypoint
+│   │   ├── download_models.py       # Model download script
+│   │   ├── models.yaml              # Model definitions
+│   │   └── requirements_rocm.txt    # Python dependencies
+│   └── comfyui/                     # ComfyUI files
+│       └── sample_workflow.json     # Example ComfyUI workflow
 ├── build.sh                         # Build script
 ├── docker-compose.yaml              # Docker Compose configuration
 ├── README.md                        # Quick start guide
