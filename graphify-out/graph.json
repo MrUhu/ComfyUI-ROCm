@@ -25,7 +25,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "file_type": "code",
       "norm_label": "download_file()",
       "source_file": "artifacts/workspace/download_models.py",
@@ -37,7 +37,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "file_type": "code",
       "norm_label": "download_model_set()",
       "source_file": "artifacts/workspace/download_models.py",
@@ -49,7 +49,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "file_type": "code",
       "norm_label": "load_models_config()",
       "source_file": "artifacts/workspace/download_models.py",
@@ -61,7 +61,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "file_type": "code",
       "norm_label": "log()",
       "source_file": "artifacts/workspace/download_models.py",
@@ -73,10 +73,70 @@
       "_callable": true,
       "_origin": "ast",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "artifacts/workspace/download_models.py",
+      "source_location": "L102"
+    },
+    {
+      "id": "download_models_download_file",
+      "label": "download_file()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "download_models.py",
+      "file_type": "code",
+      "norm_label": "download_file()",
+      "source_file": "download_models.py",
+      "source_location": "L17"
+    },
+    {
+      "id": "download_models_download_model_set",
+      "label": "download_model_set()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "download_models.py",
+      "file_type": "code",
+      "norm_label": "download_model_set()",
+      "source_file": "download_models.py",
+      "source_location": "L69"
+    },
+    {
+      "id": "download_models_load_models_config",
+      "label": "load_models_config()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "download_models.py",
+      "file_type": "code",
+      "norm_label": "load_models_config()",
+      "source_file": "download_models.py",
+      "source_location": "L59"
+    },
+    {
+      "id": "download_models_log",
+      "label": "log()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "download_models.py",
+      "file_type": "code",
+      "norm_label": "log()",
+      "source_file": "download_models.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "download_models_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "download_models.py",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "download_models.py",
       "source_location": "L102"
     },
     {
@@ -84,7 +144,7 @@
       "label": "main()",
       "_callable": true,
       "_origin": "ast",
-      "community": 1,
+      "community": 5,
       "community_name": "download_models.py",
       "file_type": "code",
       "norm_label": "main()",
@@ -93,24 +153,13 @@
     },
     {
       "id": "artifacts_workspace_download_models",
-      "label": "download_models.py",
+      "label": "workspace/download_models.py",
       "_origin": "ast",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "file_type": "code",
-      "norm_label": "download_models.py",
+      "norm_label": "workspace/download_models.py",
       "source_file": "artifacts/workspace/download_models.py",
-      "source_location": "L1"
-    },
-    {
-      "id": "pre_commit_hooks_graphify_sync",
-      "label": "graphify-sync.py",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "download_models.py",
-      "file_type": "code",
-      "norm_label": "graphify-sync.py",
-      "source_file": ".pre-commit-hooks/graphify-sync.py",
       "source_location": "L1"
     },
     {
@@ -118,7 +167,7 @@
       "label": "Smart model downloader for ComfyUI",
       "_origin": "ast",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "file_type": "rationale",
       "norm_label": "smart model downloader for comfyui",
       "source_file": "artifacts/workspace/download_models.py",
@@ -129,7 +178,7 @@
       "label": "Download file with progress bar and validation",
       "_origin": "ast",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "file_type": "rationale",
       "norm_label": "download file with progress bar and validation",
       "source_file": "artifacts/workspace/download_models.py",
@@ -140,7 +189,7 @@
       "label": "Load models configuration from YAML",
       "_origin": "ast",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "file_type": "rationale",
       "norm_label": "load models configuration from yaml",
       "source_file": "artifacts/workspace/download_models.py",
@@ -151,22 +200,11 @@
       "label": "Download a specific set of models",
       "_origin": "ast",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "file_type": "rationale",
       "norm_label": "download a specific set of models",
       "source_file": "artifacts/workspace/download_models.py",
       "source_location": "L70"
-    },
-    {
-      "id": "pre_commit_hooks_graphify_sync_rationale_2",
-      "label": "Pre-commit hook that syncs graphify outputs when topology changes are detected.",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "download_models.py",
-      "file_type": "rationale",
-      "norm_label": "pre-commit hook that syncs graphify outputs when topology changes are detected.",
-      "source_file": ".pre-commit-hooks/graphify-sync.py",
-      "source_location": "L2"
     },
     {
       "id": "docs_architecture_artifacts_workspace_download_models_py_artifacts_workspace_download_models_py",
@@ -253,64 +291,52 @@
       "source_location": "L114"
     },
     {
-      "id": "docs_usage_container_management",
-      "label": "Container Management",
+      "id": "docs_usage_custom_model_downloads",
+      "label": "Custom Model Downloads",
       "_origin": "ast",
       "community": 11,
-      "community_name": "Container Management",
+      "community_name": "Model Management",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "container management",
+      "norm_label": "custom model downloads",
       "source_file": "docs/usage.md",
-      "source_location": "L113"
+      "source_location": "L71"
     },
     {
-      "id": "docs_usage_execute_commands_inside_container",
-      "label": "Execute Commands Inside Container",
+      "id": "docs_usage_model_directory_structure",
+      "label": "Model Directory Structure",
       "_origin": "ast",
       "community": 11,
-      "community_name": "Container Management",
+      "community_name": "Model Management",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "execute commands inside container",
+      "norm_label": "model directory structure",
       "source_file": "docs/usage.md",
-      "source_location": "L146"
+      "source_location": "L80"
     },
     {
-      "id": "docs_usage_remove_container",
-      "label": "Remove Container",
+      "id": "docs_usage_model_download_modes",
+      "label": "Model Download Modes",
       "_origin": "ast",
       "community": 11,
-      "community_name": "Container Management",
+      "community_name": "Model Management",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "remove container",
+      "norm_label": "model download modes",
       "source_file": "docs/usage.md",
-      "source_location": "L159"
+      "source_location": "L59"
     },
     {
-      "id": "docs_usage_start_stop_restart",
-      "label": "Start/Stop/Restart",
+      "id": "docs_usage_model_management",
+      "label": "Model Management",
       "_origin": "ast",
       "community": 11,
-      "community_name": "Container Management",
+      "community_name": "Model Management",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "start/stop/restart",
+      "norm_label": "model management",
       "source_file": "docs/usage.md",
-      "source_location": "L115"
-    },
-    {
-      "id": "docs_usage_view_logs",
-      "label": "View Logs",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "Container Management",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "view logs",
-      "source_file": "docs/usage.md",
-      "source_location": "L133"
+      "source_location": "L57"
     },
     {
       "id": "artifacts_workspace_startup",
@@ -574,6 +600,18 @@
       "source_location": "L3"
     },
     {
+      "id": "docs_usage_access_the_interface",
+      "label": "Access the Interface",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Usage Guide",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "access the interface",
+      "source_file": "docs/usage.md",
+      "source_location": "L23"
+    },
+    {
       "id": "docs_usage_common_issues",
       "label": "Common Issues",
       "_origin": "ast",
@@ -586,16 +624,16 @@
       "source_location": "L190"
     },
     {
-      "id": "docs_usage_custom_model_downloads",
-      "label": "Custom Model Downloads",
+      "id": "docs_usage_container_management",
+      "label": "Container Management",
       "_origin": "ast",
       "community": 4,
       "community_name": "Usage Guide",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "custom model downloads",
+      "norm_label": "container management",
       "source_file": "docs/usage.md",
-      "source_location": "L71"
+      "source_location": "L113"
     },
     {
       "id": "docs_usage_debug_mode",
@@ -610,6 +648,30 @@
       "source_location": "L200"
     },
     {
+      "id": "docs_usage_docker_compose",
+      "label": "Docker Compose",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Usage Guide",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "docker compose",
+      "source_file": "docs/usage.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "docs_usage_docker_run",
+      "label": "Docker Run",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Usage Guide",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "docker run",
+      "source_file": "docs/usage.md",
+      "source_location": "L5"
+    },
+    {
       "id": "docs_usage_environment_variables",
       "label": "Environment Variables",
       "_origin": "ast",
@@ -622,6 +684,18 @@
       "source_location": "L29"
     },
     {
+      "id": "docs_usage_execute_commands_inside_container",
+      "label": "Execute Commands Inside Container",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Usage Guide",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "execute commands inside container",
+      "source_file": "docs/usage.md",
+      "source_location": "L146"
+    },
+    {
       "id": "docs_usage_health_check",
       "label": "Health Check",
       "_origin": "ast",
@@ -632,42 +706,6 @@
       "norm_label": "health check",
       "source_file": "docs/usage.md",
       "source_location": "L214"
-    },
-    {
-      "id": "docs_usage_model_directory_structure",
-      "label": "Model Directory Structure",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "Usage Guide",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "model directory structure",
-      "source_file": "docs/usage.md",
-      "source_location": "L80"
-    },
-    {
-      "id": "docs_usage_model_download_modes",
-      "label": "Model Download Modes",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "Usage Guide",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "model download modes",
-      "source_file": "docs/usage.md",
-      "source_location": "L59"
-    },
-    {
-      "id": "docs_usage_model_management",
-      "label": "Model Management",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "Usage Guide",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "model management",
-      "source_file": "docs/usage.md",
-      "source_location": "L57"
     },
     {
       "id": "docs_usage_next_steps",
@@ -742,6 +780,30 @@
       "source_location": "L102"
     },
     {
+      "id": "docs_usage_remove_container",
+      "label": "Remove Container",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Usage Guide",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "remove container",
+      "source_file": "docs/usage.md",
+      "source_location": "L159"
+    },
+    {
+      "id": "docs_usage_running_comfyui",
+      "label": "Running ComfyUI",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Usage Guide",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "running comfyui",
+      "source_file": "docs/usage.md",
+      "source_location": "L3"
+    },
+    {
       "id": "docs_usage_setting_environment_variables",
       "label": "Setting Environment Variables",
       "_origin": "ast",
@@ -752,6 +814,18 @@
       "norm_label": "setting environment variables",
       "source_file": "docs/usage.md",
       "source_location": "L37"
+    },
+    {
+      "id": "docs_usage_start_stop_restart",
+      "label": "Start/Stop/Restart",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Usage Guide",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "start/stop/restart",
+      "source_file": "docs/usage.md",
+      "source_location": "L115"
     },
     {
       "id": "docs_usage_troubleshooting",
@@ -790,6 +864,18 @@
       "source_location": "L1"
     },
     {
+      "id": "docs_usage_view_logs",
+      "label": "View Logs",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "Usage Guide",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "view logs",
+      "source_file": "docs/usage.md",
+      "source_location": "L133"
+    },
+    {
       "id": "docs_usage_volume_mounts",
       "label": "Volume Mounts",
       "_origin": "ast",
@@ -814,52 +900,81 @@
       "source_location": "L176"
     },
     {
-      "id": "docs_usage_access_the_interface",
-      "label": "Access the Interface",
+      "id": "download_models",
+      "label": "download_models.py",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Running ComfyUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "access the interface",
-      "source_file": "docs/usage.md",
-      "source_location": "L23"
+      "community_name": "download_models.py",
+      "file_type": "code",
+      "norm_label": "download_models.py",
+      "source_file": "download_models.py",
+      "source_location": "L1"
     },
     {
-      "id": "docs_usage_docker_compose",
-      "label": "Docker Compose",
+      "id": "pre_commit_hooks_graphify_sync",
+      "label": "graphify-sync.py",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Running ComfyUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "docker compose",
-      "source_file": "docs/usage.md",
-      "source_location": "L17"
+      "community_name": "download_models.py",
+      "file_type": "code",
+      "norm_label": "graphify-sync.py",
+      "source_file": ".pre-commit-hooks/graphify-sync.py",
+      "source_location": "L1"
     },
     {
-      "id": "docs_usage_docker_run",
-      "label": "Docker Run",
+      "id": "download_models_rationale_1",
+      "label": "Smart model downloader for ComfyUI",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Running ComfyUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "docker run",
-      "source_file": "docs/usage.md",
-      "source_location": "L5"
+      "community_name": "download_models.py",
+      "file_type": "rationale",
+      "norm_label": "smart model downloader for comfyui",
+      "source_file": "download_models.py",
+      "source_location": "L1"
     },
     {
-      "id": "docs_usage_running_comfyui",
-      "label": "Running ComfyUI",
+      "id": "download_models_rationale_18",
+      "label": "Download file with progress bar and validation",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Running ComfyUI",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "running comfyui",
-      "source_file": "docs/usage.md",
-      "source_location": "L3"
+      "community_name": "download_models.py",
+      "file_type": "rationale",
+      "norm_label": "download file with progress bar and validation",
+      "source_file": "download_models.py",
+      "source_location": "L18"
+    },
+    {
+      "id": "download_models_rationale_60",
+      "label": "Load models configuration from YAML",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "download_models.py",
+      "file_type": "rationale",
+      "norm_label": "load models configuration from yaml",
+      "source_file": "download_models.py",
+      "source_location": "L60"
+    },
+    {
+      "id": "download_models_rationale_70",
+      "label": "Download a specific set of models",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "download_models.py",
+      "file_type": "rationale",
+      "norm_label": "download a specific set of models",
+      "source_file": "download_models.py",
+      "source_location": "L70"
+    },
+    {
+      "id": "pre_commit_hooks_graphify_sync_rationale_2",
+      "label": "Pre-commit hook that syncs graphify outputs when topology changes are detected.",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "download_models.py",
+      "file_type": "rationale",
+      "norm_label": "pre-commit hook that syncs graphify outputs when topology changes are detected.",
+      "source_file": ".pre-commit-hooks/graphify-sync.py",
+      "source_location": "L2"
     },
     {
       "id": "build",
@@ -1622,23 +1737,11 @@
       "source_url": null
     },
     {
-      "id": "os",
-      "label": "os",
-      "_origin": "semantic",
-      "community": 1,
-      "community_name": "download_models.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "os",
-      "source_file": "",
-      "type": "external"
-    },
-    {
       "id": "pathlib",
       "label": "pathlib",
       "_origin": "semantic",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "pathlib",
@@ -1650,46 +1753,10 @@
       "label": "requests",
       "_origin": "semantic",
       "community": 1,
-      "community_name": "download_models.py",
+      "community_name": "workspace/download_models.py",
       "external": true,
       "file_type": "concept",
       "norm_label": "requests",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "subprocess",
-      "label": "subprocess",
-      "_origin": "semantic",
-      "community": 1,
-      "community_name": "download_models.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "subprocess",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "sys",
-      "label": "sys",
-      "_origin": "semantic",
-      "community": 1,
-      "community_name": "download_models.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "sys",
-      "source_file": "",
-      "type": "external"
-    },
-    {
-      "id": "yaml",
-      "label": "yaml",
-      "_origin": "semantic",
-      "community": 1,
-      "community_name": "download_models.py",
-      "external": true,
-      "file_type": "concept",
-      "norm_label": "yaml",
       "source_file": "",
       "type": "external"
     },
@@ -1702,6 +1769,54 @@
       "external": true,
       "file_type": "concept",
       "norm_label": "urllib_parse",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "os",
+      "label": "os",
+      "_origin": "semantic",
+      "community": 5,
+      "community_name": "download_models.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "os",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "subprocess",
+      "label": "subprocess",
+      "_origin": "semantic",
+      "community": 5,
+      "community_name": "download_models.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "subprocess",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "sys",
+      "label": "sys",
+      "_origin": "semantic",
+      "community": 5,
+      "community_name": "download_models.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "sys",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "yaml",
+      "label": "yaml",
+      "_origin": "semantic",
+      "community": 5,
+      "community_name": "download_models.py",
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "yaml",
       "source_file": "",
       "type": "external"
     }
@@ -1816,6 +1931,102 @@
       "weight": 1.0
     },
     {
+      "source": "download_models_download_file",
+      "target": "download_models_log",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "download_models.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models_download_model_set",
+      "target": "download_models_log",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "download_models.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models_download_model_set",
+      "target": "download_models_download_model_set",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "download_models.py",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models_download_model_set",
+      "target": "download_models_download_file",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "download_models.py",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models_load_models_config",
+      "target": "download_models_log",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "download_models.py",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models_main",
+      "target": "download_models_log",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "download_models.py",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models_main",
+      "target": "download_models_load_models_config",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "download_models.py",
+      "source_location": "L132",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models_main",
+      "target": "download_models_download_model_set",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "download_models.py",
+      "source_location": "L138",
+      "weight": 1.0
+    },
+    {
       "source": "artifacts_workspace_download_models",
       "target": "yaml",
       "relation": "imports",
@@ -1864,6 +2075,54 @@
       "weight": 1.0
     },
     {
+      "source": "download_models",
+      "target": "yaml",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "download_models.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models",
+      "target": "os",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "download_models.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models",
+      "target": "sys",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "download_models.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models",
+      "target": "requests",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "download_models.py",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "pre_commit_hooks_graphify_sync",
       "target": "os",
       "relation": "imports",
@@ -1908,6 +2167,18 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "artifacts/workspace/download_models.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "download_models.py",
       "source_location": "L7",
       "weight": 1.0
     },
@@ -2946,6 +3217,61 @@
       "weight": 1.0
     },
     {
+      "source": "download_models",
+      "target": "download_models_main",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "download_models.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models",
+      "target": "download_models_log",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "download_models.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models",
+      "target": "download_models_download_file",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "download_models.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models",
+      "target": "download_models_load_models_config",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "download_models.py",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models",
+      "target": "download_models_download_model_set",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "download_models.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
       "source": "pre_commit_hooks_graphify_sync",
       "target": "pre_commit_hooks_graphify_sync_main",
       "relation": "contains",
@@ -3008,6 +3334,50 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "artifacts/workspace/download_models.py",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models_rationale_1",
+      "target": "download_models",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "download_models.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models_rationale_18",
+      "target": "download_models_download_file",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "download_models.py",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models_rationale_60",
+      "target": "download_models_load_models_config",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "download_models.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "download_models_rationale_70",
+      "target": "download_models_download_model_set",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "download_models.py",
       "source_location": "L70",
       "weight": 1.0
     },
@@ -3280,5 +3650,5 @@
       "source_file": ".roo/skills-knowledge/graphify/SKILL.md"
     }
   ],
-  "built_at_commit": "35e4ec66e6c2d4ab415b8ace7b229ae53f42cf67"
+  "built_at_commit": "54c85a22e49c3a3c3e71d28f770e4f52aff56e4f"
 }

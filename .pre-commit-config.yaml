@@ -4,7 +4,9 @@ repos:
     hooks:
       - id: ruff-check
         args: [--fix]
+        exclude: graphify-out/
       - id: ruff-format
+        exclude: graphify-out/
 
   # --- General File Hygiene ---
   - repo: https://github.com/pre-commit/pre-commit-hooks

@@ -23,15 +23,8 @@
       "artifacts_workspace_download_models_rationale_18",
       "artifacts_workspace_download_models_rationale_60",
       "artifacts_workspace_download_models_rationale_70",
-      "os",
       "pathlib",
-      "pre_commit_hooks_graphify_sync",
-      "pre_commit_hooks_graphify_sync_main",
-      "pre_commit_hooks_graphify_sync_rationale_2",
-      "requests",
-      "subprocess",
-      "sys",
-      "yaml"
+      "requests"
     ],
     "2": [
       "agents",
@@ -63,32 +56,50 @@
       "docs_architecture_system_architecture"
     ],
     "4": [
+      "docs_usage_access_the_interface",
       "docs_usage_common_issues",
-      "docs_usage_custom_model_downloads",
+      "docs_usage_container_management",
       "docs_usage_debug_mode",
+      "docs_usage_docker_compose",
+      "docs_usage_docker_run",
       "docs_usage_environment_variables",
+      "docs_usage_execute_commands_inside_container",
       "docs_usage_health_check",
-      "docs_usage_model_directory_structure",
-      "docs_usage_model_download_modes",
-      "docs_usage_model_management",
       "docs_usage_next_steps",
       "docs_usage_optimization",
       "docs_usage_performance_tips",
       "docs_usage_pull_latest_image",
       "docs_usage_rebuild_from_source",
       "docs_usage_recommended_docker_compose_volumes",
+      "docs_usage_remove_container",
+      "docs_usage_running_comfyui",
       "docs_usage_setting_environment_variables",
+      "docs_usage_start_stop_restart",
       "docs_usage_troubleshooting",
       "docs_usage_updating",
       "docs_usage_usage_guide",
+      "docs_usage_view_logs",
       "docs_usage_volume_mounts",
       "docs_usage_vram_management"
     ],
     "5": [
-      "docs_usage_access_the_interface",
-      "docs_usage_docker_compose",
-      "docs_usage_docker_run",
-      "docs_usage_running_comfyui"
+      "download_models",
+      "download_models_download_file",
+      "download_models_download_model_set",
+      "download_models_load_models_config",
+      "download_models_log",
+      "download_models_main",
+      "download_models_rationale_1",
+      "download_models_rationale_18",
+      "download_models_rationale_60",
+      "download_models_rationale_70",
+      "os",
+      "pre_commit_hooks_graphify_sync",
+      "pre_commit_hooks_graphify_sync_main",
+      "pre_commit_hooks_graphify_sync_rationale_2",
+      "subprocess",
+      "sys",
+      "yaml"
     ],
     "6": [
       "build",
@@ -148,11 +159,10 @@
       "docs_architecture_key_components"
     ],
     "11": [
-      "docs_usage_container_management",
-      "docs_usage_execute_commands_inside_container",
-      "docs_usage_remove_container",
-      "docs_usage_start_stop_restart",
-      "docs_usage_view_logs"
+      "docs_usage_custom_model_downloads",
+      "docs_usage_model_directory_structure",
+      "docs_usage_model_download_modes",
+      "docs_usage_model_management"
     ],
     "12": [
       "urllib_parse"
@@ -168,17 +178,17 @@
   },
   "cohesion": {
     "0": 0.2,
-    "1": 0.15204678362573099,
+    "1": 0.2727272727272727,
     "2": 0.3333333333333333,
     "3": 0.1111111111111111,
-    "4": 0.1,
-    "5": 0.5,
+    "4": 0.08,
+    "5": 0.17647058823529413,
     "6": 1.0,
     "7": 0.08333333333333333,
     "8": 0.19230769230769232,
     "9": 1.0,
     "10": 0.2857142857142857,
-    "11": 0.4,
+    "11": 0.5,
     "12": 1.0,
     "13": 1.0,
     "14": 1.0
@@ -210,6 +220,11 @@
       "degree": 7
     },
     {
+      "id": "download_models_download_model_set",
+      "label": "download_model_set()",
+      "degree": 7
+    },
+    {
       "id": "docs_architecture_key_components",
       "label": "Key Components",
       "degree": 7
@@ -220,37 +235,32 @@
       "degree": 5
     },
     {
+      "id": "download_models_log",
+      "label": "log()",
+      "degree": 5
+    },
+    {
       "id": "docs_usage_container_management",
       "label": "Container Management",
       "degree": 5
-    },
-    {
-      "id": "docs_setup_troubleshooting_setup_issues",
-      "label": "Troubleshooting Setup Issues",
-      "degree": 5
-    },
-    {
-      "id": "artifacts_workspace_download_models_download_file",
-      "label": "download_file()",
-      "degree": 4
     }
   ],
   "surprises": [],
   "questions": [
     {
       "type": "bridge_node",
-      "question": "Why does `Usage Guide` connect `Usage Guide` to `ComfyUI ROCm - Project Overview`, `Container Management`, `Running ComfyUI`?",
-      "why": "High betweenness centrality (0.233) - this node is a cross-community bridge."
+      "question": "Why does `Usage Guide` connect `Usage Guide` to `ComfyUI ROCm - Project Overview`, `Model Management`?",
+      "why": "High betweenness centrality (0.202) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `Architecture Documentation` connect `Architecture Documentation` to `ComfyUI ROCm - Project Overview`, `Key Components`?",
-      "why": "High betweenness centrality (0.205) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.177) - this node is a cross-community bridge."
     },
     {
       "type": "bridge_node",
       "question": "Why does `Setup Instructions` connect `Setup Instructions` to `ComfyUI ROCm - Project Overview`?",
-      "why": "High betweenness centrality (0.198) - this node is a cross-community bridge."
+      "why": "High betweenness centrality (0.172) - this node is a cross-community bridge."
     },
     {
       "type": "isolated_nodes",
@@ -265,7 +275,7 @@
     {
       "type": "low_cohesion",
       "question": "Should `Usage Guide` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.1 - nodes in this community are weakly interconnected."
+      "why": "Cohesion score 0.08 - nodes in this community are weakly interconnected."
     },
     {
       "type": "low_cohesion",

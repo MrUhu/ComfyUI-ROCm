@@ -66,9 +66,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1791043164.8240445,
-    "seen": 1791043198.5753772,
-    "ast_hash": "4ce2d5fea43777b970f6c8c7d4b73b53",
+    "mtime": 1791058562.9972985,
+    "seen": 1791058797.6326506,
+    "ast_hash": "0fd4bff82c9bb858e032b65a2854c304",
     "semantic_hash": ""
   },
   "docker-compose.yaml": {
@@ -84,9 +84,9 @@
     "semantic_hash": ""
   },
   ".pre-commit-config.yaml": {
-    "mtime": 1791057042.803487,
-    "seen": 1791057392.943418,
-    "ast_hash": "23f1974c3c2adc829f6a0efbb5492878",
+    "mtime": 1791058824.248443,
+    "seen": 1791058830.9676769,
+    "ast_hash": "a8d9004a44b33a0667362dd526b319ab",
     "semantic_hash": ""
   },
   "docs/architecture.md": {
@@ -132,9 +132,9 @@
     "semantic_hash": ""
   },
   "artifacts/workspace/models.yaml": {
-    "mtime": 1791057117.114674,
-    "seen": 1791057392.9434397,
-    "ast_hash": "2dc75c73ea3b14c692c9119e68113b2d",
+    "mtime": 1791058673.0936644,
+    "seen": 1791058797.6326513,
+    "ast_hash": "d7790e0f933af544643c1f80c5d17392",
     "semantic_hash": ""
   },
   "artifacts/workspace/requirements_rocm.txt": {
@@ -153,6 +153,18 @@
     "mtime": 1791033119.2255898,
     "seen": 1791036537.021327,
     "ast_hash": "b403091d9b6178ce50a612b9e3646b69",
+    "semantic_hash": ""
+  },
+  "download_models.py": {
+    "mtime": 1791058020.823763,
+    "seen": 1791058021.3425887,
+    "ast_hash": "aff1e66729e0e5e12b4fe1b212420394",
+    "semantic_hash": ""
+  },
+  "artifacts/comfyui/sample_workflow.json": {
+    "mtime": 1791058797.2514,
+    "seen": 1791058797.632635,
+    "ast_hash": "10274bf351b5d3c008f55d45f3da820f",
     "semantic_hash": ""
   }
 }

@@ -9,7 +9,8 @@ output/
 models/
 
 # Graphify
-graphify-out/
+graphify-out/20*/
+graphify-out/cache/
 
 # AI docs / findings
 findings/

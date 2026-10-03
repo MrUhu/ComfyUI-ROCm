@@ -67,6 +67,8 @@ docker run -d \
 
 Access ComfyUI at: **http://localhost:8188**
 
+> **Quick Start:** Add `-e MODEL_DOWNLOAD=default` to download ~17.3 GB of default models on first run. Subsequent runs will skip already-downloaded models.
+
 ## Requirements
 
 | Component | Requirement |
@@ -134,8 +136,11 @@ docker run -d \
 
 Control model downloading with the `MODEL_DOWNLOAD` environment variable. Models are downloaded on first run and cached in the mounted volumes.
 
+> **Important:** By default, **no models are downloaded** on first run. Set `MODEL_DOWNLOAD` to trigger downloads. See options below.
+
 | Mode | Size | Models |
 |------|------|--------|
+| `""` (empty/unset) | No download | - | **Default** - Container starts with no models, user must set `MODEL_DOWNLOAD` to trigger downloads |
 | `default` | ~17.3 GB | FLUX.1 Dev FP8, Flux VAE (ae.safetensors) |
 | `common` | ~41.4 GB | FLUX.1 Schnell, SD VAE FT MSE, Flux VAE, RealESRGAN x4plus, RealESRGAN x4plus Anime, EasyNegative, Flux Canny ControlNet V3, Flux Depth ControlNet V3 |
 | `realistic` | ~13.5 GB | Juggernaut XL v9, Juggernaut XL Lightning, SD VAE FT MSE |
@@ -144,6 +149,38 @@ Control model downloading with the `MODEL_DOWNLOAD` environment variable. Models
 | `pixelart` | ~9.1 GB | Pixel Art XL, All-In-One Pixel Model, Pixel Art LoRA, SD VAE FT MSE |
 | `all` | ~135.3 GB | All sets combined |
 | `none` | 0 GB | No downloads |
+
+### First Run Setup
+
+By default, the container starts with **no models downloaded**. To download models on first run:
+
+```bash
+# Download default models (~17.3 GB)
+docker run -d --device=/dev/kfd --device=/dev/dri --group-add=video \
+  -p 8188:8188 -e MODEL_DOWNLOAD=default -e CUDA_VISIBLE_DEVICES="" \
+  -v ./models:/workspace/ComfyUI/models \
+  -v ./output:/workspace/ComfyUI/output \
+  corundex/comfyui-rocm:latest
+```
+
+### Triggering Additional Downloads
+
+If you already have models mounted and want to download additional sets:
+
+```bash
+# Stop container
+docker stop comfyui-rocm
+
+# Update MODEL_DOWNLOAD and restart
+docker run -d --name comfyui-rocm \
+  --device=/dev/kfd --device=/dev/dri --group-add=video \
+  -p 8188:8188 -e MODEL_DOWNLOAD=realistic -e CUDA_VISIBLE_DEVICES="" \
+  -v ./models:/workspace/ComfyUI/models \
+  -v ./output:/workspace/ComfyUI/output \
+  corundex/comfyui-rocm:latest
+```
+
+Models that already exist are skipped (checked by file size), so you can safely change `MODEL_DOWNLOAD` to add new model sets without re-downloading existing ones.
 
 ### Usage Examples
 
@@ -211,7 +248,7 @@ services:
 
     # Environment variables
     environment:
-      - MODEL_DOWNLOAD=default
+      - MODEL_DOWNLOAD=none    # Change to 'default', 'realistic', etc. to download models
       - HIP_VISIBLE_DEVICES=0
       - CUDA_VISIBLE_DEVICES=""
 

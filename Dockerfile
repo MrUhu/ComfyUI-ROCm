@@ -41,21 +41,22 @@ RUN pip install --no-cache-dir -r /workspace/requirements_rocm.txt
 
 # Copy startup script, models config, and sample workflow
 COPY artifacts/workspace/startup.sh /workspace/startup.sh
-COPY artifacts/workspace/download_models.py /workspace/download_models.py
+COPY download_models.py /workspace/download_models.py
 COPY artifacts/workspace/models.yaml /workspace/models.yaml
-COPY artifacts/comfyui/sample_workflow.json /workspace/ComfyUI/
+COPY artifacts/comfyui/* /workspace/ComfyUI/
 
 # Make startup script executable
 RUN chmod +x /workspace/startup.sh
 
 # Environment variables for model download behavior
 # MODEL_DOWNLOAD options:
-#   "default"   - Download basic SD 1.5 model (default)
+#   "default"   - Download basic SD 1.5 model
 #   "all"       - Download full model set (SD 1.5, SDXL, ControlNet, etc.)
 #   "realistic" - Download realistic photo models
 #   "none"      - Skip all downloads, use existing models only
-#   Custom      - Any section name from models.conf
-ENV MODEL_DOWNLOAD=default
+#   "" (empty/unset) - No models downloaded by default
+#   Custom      - Any section name from models.yaml
+ENV MODEL_DOWNLOAD=""
 
 # Expose ComfyUI port
 EXPOSE 8188

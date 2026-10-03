@@ -1,4 +1,10 @@
 models:
+  default:
+    - name: "SD3.5 Medium FP8 (All-in-One)"
+      url: "https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors"
+      path: "checkpoints/sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors"
+      min_size: 8500000000
+
   photorealistic:
     - name: "SD3.5 Medium FP8 (All-in-One)"
       url: "https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors"
