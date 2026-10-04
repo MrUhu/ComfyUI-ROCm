@@ -11,7 +11,7 @@ log() {
 python -u /workspace/download_models.py \
     -d /workspace/ComfyUI/models \
     -c /workspace/models.yaml \
-    -s "${MODEL_DOWNLOAD:-}"
+    ${MODEL_DOWNLOAD:+-s "${MODEL_DOWNLOAD}"}
 
 # Start ComfyUI
 log "Starting ComfyUI on port 8188..."

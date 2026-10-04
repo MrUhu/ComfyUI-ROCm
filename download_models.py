@@ -146,7 +146,7 @@ def main():
 
     # Determine model set: CLI arg > env var
     model_download = args.set
-    if model_download is None:
+    if not model_download:
         model_download = os.environ.get("MODEL_DOWNLOAD", "").strip() or None
 
     log(
