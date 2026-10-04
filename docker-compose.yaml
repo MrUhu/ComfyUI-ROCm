@@ -4,16 +4,16 @@ services:
     pull_policy: always
     container_name: comfyui-rocm
     hostname: comfyui-rocm
-    
+
     # GPU access for AMD ROCm
     devices:
       - /dev/kfd:/dev/kfd
       - /dev/dri:/dev/dri
-    
+
     # Add video group for GPU access
     group_add:
       - video
-    
+
     # Port mapping
     ports:
       - "8188:8188"
@@ -43,7 +43,7 @@ services:
 
     # Restart policy
     restart: unless-stopped
-    
+
     # Healthcheck
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8188/"]

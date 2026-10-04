@@ -1,0 +1,80 @@
+{
+  "1": {
+    "inputs": {
+      "ckpt_name": "sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint — SD3.5 Medium FP8"
+    }
+  },
+  "2": {
+    "inputs": {
+      "text": "a stunning photorealistic portrait, professional photography, natural lighting, detailed skin texture, sharp focus, high quality, 8k uhd, dslr, soft lighting, high resolution",
+      "clip": ["1", 1]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Positive Prompt)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "text": "cartoon, 3d render, render, drawing, sketch, painting, anime, pixel art, low quality, blurry, worst quality, deformed, distorted, disfigured, bad anatomy, extra limbs",
+      "clip": ["1", 1]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Negative Prompt)"
+    }
+  },
+  "4": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image — 1024x1024"
+    }
+  },
+  "5": {
+    "inputs": {
+      "seed": 67890,
+      "steps": 28,
+      "cfg": 5.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "normal",
+      "denoise": 1,
+      "model": ["1", 0],
+      "positive": ["2", 0],
+      "negative": ["3", 0],
+      "latent_image": ["4", 0]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler — SD3.5 Medium Settings"
+    }
+  },
+  "6": {
+    "inputs": {
+      "samples": ["5", 0],
+      "vae": ["1", 2]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "7": {
+    "inputs": {
+      "filename_prefix": "ComfyUI_SD35_Medium_Photorealistic",
+      "images": ["6", 0]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  }
+}

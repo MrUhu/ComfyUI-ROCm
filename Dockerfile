@@ -1,7 +1,8 @@
 # ROCm ComfyUI Dockerfile
 # Based on AMD's official ROCm PyTorch container
+# Base image: rocm/pytorch:rocm10.0_ubuntu26.04_py3.14_pytorch_release_2.13.0
 
-FROM rocm/pytorch:rocm6.4.1_ubuntu24.04_py3.12_pytorch_release_2.6.0
+FROM rocm/pytorch:rocm10.0_ubuntu26.04_py3.14_pytorch_release_2.13.0
 
 # Set working directory
 WORKDIR /workspace
@@ -32,29 +33,30 @@ RUN mkdir -p /workspace/ComfyUI/models/checkpoints && \
   mkdir -p /workspace/ComfyUI/custom_nodes
 
 # Copy ROCm-tested requirements files
-COPY docker/requirements_rocm.txt /workspace/
+COPY artifacts/workspace/requirements_rocm.txt /workspace/
 
 # Install Python dependencies using ROCm-compatible requirements
 # These files have been tested on real AMD hardware and filter out packages that break ROCm
 RUN pip install --no-cache-dir -r /workspace/requirements_rocm.txt
 
 # Copy startup script, models config, and sample workflow
-COPY docker/startup.sh /workspace/startup.sh
-COPY docker/download_models.py /workspace/download_models.py
-COPY docker/models.yaml /workspace/models.yaml
-COPY docker/sample_workflow.json /workspace/ComfyUI/
+COPY artifacts/workspace/startup.sh /workspace/startup.sh
+COPY download_models.py /workspace/download_models.py
+COPY artifacts/workspace/models.yaml /workspace/models.yaml
+COPY artifacts/comfyui/* /workspace/ComfyUI/
 
 # Make startup script executable
 RUN chmod +x /workspace/startup.sh
 
 # Environment variables for model download behavior
 # MODEL_DOWNLOAD options:
-#   "default"   - Download basic SD 1.5 model (default)
+#   "default"   - Download basic SD 1.5 model
 #   "all"       - Download full model set (SD 1.5, SDXL, ControlNet, etc.)
-#   "realistic" - Download realistic photo models  
+#   "realistic" - Download realistic photo models
 #   "none"      - Skip all downloads, use existing models only
-#   Custom      - Any section name from models.conf
-ENV MODEL_DOWNLOAD=default
+#   "" (empty/unset) - No models downloaded by default
+#   Custom      - Any section name from models.yaml
+ENV MODEL_DOWNLOAD=""
 
 # Expose ComfyUI port
 EXPOSE 8188
@@ -65,4 +67,3 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 # Use smart startup script that handles model downloads
 CMD ["/workspace/startup.sh"]
-

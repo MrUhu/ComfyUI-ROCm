@@ -1,0 +1,42 @@
+models:
+  default:
+    - name: "SD3.5 Medium FP8 (All-in-One)"
+      url: "https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors"
+      path: "checkpoints/sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors"
+      min_size: 8500000000
+
+  photorealistic:
+    - name: "SD3.5 Medium FP8 (All-in-One)"
+      url: "https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8/resolve/main/sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors"
+      path: "checkpoints/sd3.5_medium_incl_clips_t5xxlfp8scaled.safetensors"
+      min_size: 8500000000
+    - name: "FLUX.1 Dev FP8"
+      url: "https://huggingface.co/Comfy-Org/flux1-dev/resolve/main/flux1-dev-fp8.safetensors"
+      path: "checkpoints/flux1-dev-fp8.safetensors"
+      min_size: 17000000000
+    - name: "Flux HED ControlNet V3"
+      url: "https://huggingface.co/XLabs-AI/flux-controlnet-hed-v3/resolve/main/flux-hed-controlnet-v3.safetensors"
+      path: "controlnet/flux-hed-controlnet-v3.safetensors"
+      min_size: 5500000000
+    - name: "SD VAE FT MSE"
+      url: "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
+      path: "vae/vae-ft-mse-840000-ema-pruned.safetensors"
+      min_size: 300000000
+
+  pixelart:
+    - name: "Pixel Art XL"
+      url: "https://huggingface.co/nerijs/pixel-art-xl/resolve/main/pixel-art-xl.safetensors"
+      path: "checkpoints/pixel-art-xl.safetensors"
+      min_size: 170000000
+    - name: "Public Prompts Pixel Model"
+      url: "https://huggingface.co/PublicPrompts/All-In-One-Pixel-Model/resolve/main/Public-Prompts-Pixel-Model.ckpt"
+      path: "checkpoints/Public-Prompts-Pixel-Model.ckpt"
+      min_size: 2100000000
+    - name: "Pixel Art LoRA (Flux)"
+      url: "https://huggingface.co/Limbicnation/pixel-art-lora/resolve/main/pytorch_lora_weights.safetensors"
+      path: "loras/pixel-art-lora-flux.safetensors"
+      min_size: 3300000
+    - name: "SD VAE FT MSE"
+      url: "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
+      path: "vae/vae-ft-mse-840000-ema-pruned.safetensors"
+      min_size: 300000000

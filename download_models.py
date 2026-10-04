@@ -1,0 +1,196 @@
+"""
+Smart model downloader for ComfyUI
+"""
+
+import os
+import sys
+from pathlib import Path
+
+import requests
+import yaml
+
+
+def log(message):
+    print(f"[ComfyUI] {message}", flush=True)
+
+
+def download_file(url, filepath, name, min_size=0):
+    """Download file with progress bar and validation"""
+    if filepath.exists():
+        if filepath.stat().st_size >= min_size:
+            log(f"{name} already exists, skipping")
+            return True
+        else:
+            log(f"{name} exists but too small, redownloading")
+            filepath.unlink()
+
+    log(f"Downloading {name}...")
+    log(f"URL: {url}")
+    log(f"Path: {filepath}")
+
+    # Create directory if needed, ensuring proper permissions
+    try:
+        filepath.parent.mkdir(parents=True, exist_ok=True)
+        # Ensure the directory is writable (fixes permission issues from root-created dirs)
+        os.chmod(filepath.parent, 0o777)
+    except OSError as e:
+        log(f"Failed to create directory {filepath.parent}: {e}")
+        return False
+
+    try:
+        response = requests.get(url, stream=True)
+        response.raise_for_status()
+
+        with open(filepath, "wb") as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                if chunk:
+                    f.write(chunk)
+
+        # Validate file size
+        if filepath.stat().st_size >= min_size:
+            log(f"{name} downloaded successfully")
+            return True
+        else:
+            log(f"{name} download failed - file too small")
+            filepath.unlink()
+            return False
+
+    except (requests.RequestException, OSError) as e:
+        log(f"{name} download failed: {e}")
+        if filepath.exists():
+            filepath.unlink()
+        return False
+
+
+def load_models_config(config_path):
+    """Load models configuration from YAML"""
+    try:
+        with open(config_path, "r") as f:
+            return yaml.safe_load(f)
+    except (yaml.YAMLError, FileNotFoundError) as e:
+        log(f"Failed to load config {config_path}: {e}")
+        return None
+
+
+def download_model_set(models_config, model_set, models_base):
+    """Download a specific set of models"""
+    if model_set == "all":
+        # Special case: download all model sets except 'all' itself
+        log("Downloading ALL model sets...")
+        all_success = True
+        for key in models_config["models"]:
+            if key != "all":  # Skip 'all' to avoid recursion
+                log(f"Processing model set: {key}")
+                if not download_model_set(models_config, key, models_base):
+                    all_success = False
+        log(f"All model sets completed: {'SUCCESS' if all_success else 'PARTIAL'}")
+        return all_success
+
+    if model_set not in models_config["models"]:
+        log(f"Unknown model set: {model_set}")
+        return False
+
+    models = models_config["models"][model_set]
+    log(f"Downloading {model_set} models ({len(models)} total)...")
+
+    success_count = 0
+    for model in models:
+        filepath = Path(models_base) / model["path"]
+        min_size = model.get("min_size", 100000000)  # 100MB default
+
+        if download_file(model["url"], filepath, model["name"], min_size):
+            success_count += 1
+
+    log(f"{model_set} downloads completed: {success_count}/{len(models)} successful")
+    return success_count == len(models)
+
+
+def main():
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Smart model downloader for ComfyUI")
+    parser.add_argument(
+        "-d",
+        "--models-base",
+        default="models",
+        help="Models download directory (default: models/)",
+    )
+    parser.add_argument(
+        "-c",
+        "--config-path",
+        default=None,
+        help="Path to models.yaml config file (auto-detected if not specified)",
+    )
+    parser.add_argument(
+        "-s",
+        "--set",
+        default=None,
+        help="Model set to download (e.g., default, realistic, common). Overrides MODEL_DOWNLOAD env var.",
+    )
+    args = parser.parse_args()
+
+    models_base = args.models_base
+
+    # Auto-detect config path relative to script location
+    script_dir = Path(__file__).parent
+    relative_config = script_dir / "artifacts" / "workspace" / "models.yaml"
+
+    if args.config_path:
+        config_path = args.config_path
+    elif Path("./models.yaml").exists():
+        config_path = "./models.yaml"
+    elif relative_config.exists():
+        config_path = str(relative_config)
+    else:
+        config_path = "/workspace/models.yaml"
+
+    # Determine model set: CLI arg > env var
+    model_download = args.set
+    if model_download is None:
+        model_download = os.environ.get("MODEL_DOWNLOAD", "").strip() or None
+
+    log(
+        f"Model downloader starting (MODEL_DOWNLOAD={model_download if model_download else '(unset)'})"
+    )
+
+    # Create model directories with proper permissions
+    for subdir in [
+        "checkpoints",
+        "vae",
+        "loras",
+        "upscale_models",
+        "controlnet",
+        "embeddings",
+    ]:
+        subdir_path = Path(models_base, subdir)
+        subdir_path.mkdir(parents=True, exist_ok=True)
+        try:
+            os.chmod(subdir_path, 0o777)
+        except OSError:
+            pass  # Non-critical, downloads may still work
+
+    if model_download is None:
+        log(
+            "MODEL_DOWNLOAD not set, skipping model downloads. Set MODEL_DOWNLOAD=default to download models."
+        )
+        return True
+    if model_download == "none":
+        log("Skipping model downloads (MODEL_DOWNLOAD=none)")
+        return True
+
+    # Load configuration
+    models_config = load_models_config(config_path)
+    if not models_config:
+        log("Failed to load models configuration, skipping downloads")
+        return False
+
+    # Download models
+    if not download_model_set(models_config, model_download, models_base):
+        log("Some models failed to download")
+        sys.exit(1)
+
+    return True
+
+
+if __name__ == "__main__":
+    main()
