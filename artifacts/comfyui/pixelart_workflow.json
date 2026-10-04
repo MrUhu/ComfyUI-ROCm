@@ -1,11 +1,11 @@
 {
   "1": {
     "inputs": {
-      "ckpt_name": "pixel-art-xl.safetensors"
+      "ckpt_name": "Public-Prompts-Pixel-Model.ckpt"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
-      "title": "Load Checkpoint — Pixel Art XL"
+      "title": "Load Checkpoint — Public Prompts Pixel Model"
     }
   },
   "2": {

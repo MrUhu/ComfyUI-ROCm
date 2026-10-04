@@ -28,8 +28,14 @@ def download_file(url, filepath, name, min_size=0):
     log(f"URL: {url}")
     log(f"Path: {filepath}")
 
-    # Create directory if needed
-    filepath.parent.mkdir(parents=True, exist_ok=True)
+    # Create directory if needed, ensuring proper permissions
+    try:
+        filepath.parent.mkdir(parents=True, exist_ok=True)
+        # Ensure the directory is writable (fixes permission issues from root-created dirs)
+        os.chmod(filepath.parent, 0o777)
+    except OSError as e:
+        log(f"Failed to create directory {filepath.parent}: {e}")
+        return False
 
     try:
         response = requests.get(url, stream=True)
@@ -100,15 +106,54 @@ def download_model_set(models_config, model_set, models_base):
 
 
 def main():
-    models_base = "/workspace/ComfyUI/models"
-    config_path = "/workspace/models.yaml"
-    model_download = os.environ.get("MODEL_DOWNLOAD", "").strip() or None
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Smart model downloader for ComfyUI")
+    parser.add_argument(
+        "-d",
+        "--models-base",
+        default="models",
+        help="Models download directory (default: models/)",
+    )
+    parser.add_argument(
+        "-c",
+        "--config-path",
+        default=None,
+        help="Path to models.yaml config file (auto-detected if not specified)",
+    )
+    parser.add_argument(
+        "-s",
+        "--set",
+        default=None,
+        help="Model set to download (e.g., default, realistic, common). Overrides MODEL_DOWNLOAD env var.",
+    )
+    args = parser.parse_args()
+
+    models_base = args.models_base
+
+    # Auto-detect config path relative to script location
+    script_dir = Path(__file__).parent
+    relative_config = script_dir / "artifacts" / "workspace" / "models.yaml"
+
+    if args.config_path:
+        config_path = args.config_path
+    elif Path("./models.yaml").exists():
+        config_path = "./models.yaml"
+    elif relative_config.exists():
+        config_path = str(relative_config)
+    else:
+        config_path = "/workspace/models.yaml"
+
+    # Determine model set: CLI arg > env var
+    model_download = args.set
+    if model_download is None:
+        model_download = os.environ.get("MODEL_DOWNLOAD", "").strip() or None
 
     log(
         f"Model downloader starting (MODEL_DOWNLOAD={model_download if model_download else '(unset)'})"
     )
 
-    # Create model directories
+    # Create model directories with proper permissions
     for subdir in [
         "checkpoints",
         "vae",
@@ -117,7 +162,12 @@ def main():
         "controlnet",
         "embeddings",
     ]:
-        Path(models_base, subdir).mkdir(parents=True, exist_ok=True)
+        subdir_path = Path(models_base, subdir)
+        subdir_path.mkdir(parents=True, exist_ok=True)
+        try:
+            os.chmod(subdir_path, 0o777)
+        except OSError:
+            pass  # Non-critical, downloads may still work
 
     if model_download is None:
         log(

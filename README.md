@@ -214,6 +214,39 @@ docker run -d --device=/dev/kfd --device=/dev/dri --group-add=video \
   corundex/comfyui-rocm:latest
 ```
 
+### Host-Side Model Download
+
+You can pre-download models on the host before starting the container. This is useful for:
+- Downloading models on a schedule or during off-peak hours
+- Using the script without Docker
+- Inspecting or managing model files on the host
+
+```bash
+# Download default models to .models/ directory
+python download_models.py -s default
+
+# Download realistic photo models
+python download_models.py -s realistic
+
+# Download to custom directory
+python download_models.py -s default -d ./my-models
+
+# No downloads (use existing models only)
+python download_models.py -s none
+```
+
+Then mount the downloaded models into the container:
+
+```bash
+docker run -d \
+  --name comfyui-rocm \
+  --device=/dev/kfd --device=/dev/dri --group-add=video \
+  -p 8188:8188 -e MODEL_DOWNLOAD=none -e CUDA_VISIBLE_DEVICES="" \
+  -v ./.models:/workspace/ComfyUI/models \
+  -v ./output:/workspace/ComfyUI/output \
+  corundex/comfyui-rocm:latest
+```
+
 ## Docker Compose
 
 ```yaml

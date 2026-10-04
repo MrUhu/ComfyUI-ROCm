@@ -7,8 +7,11 @@ log() {
     echo "[ComfyUI] $1"
 }
 
-# Download models using Python script
-python -u /workspace/download_models.py
+# Download models using Python script (container paths)
+python -u /workspace/download_models.py \
+    -d /workspace/ComfyUI/models \
+    -c /workspace/models.yaml \
+    -s "${MODEL_DOWNLOAD:-}"
 
 # Start ComfyUI
 log "Starting ComfyUI on port 8188..."

@@ -27,15 +27,15 @@ models:
     - name: "Pixel Art XL"
       url: "https://huggingface.co/nerijs/pixel-art-xl/resolve/main/pixel-art-xl.safetensors"
       path: "checkpoints/pixel-art-xl.safetensors"
-      min_size: 6600000000
-    - name: "All-In-One Pixel Model"
-      url: "https://huggingface.co/PublicPrompts/All-In-One-Pixel-Model/resolve/main/All-In-One-Pixel-Model.safetensors"
-      path: "checkpoints/All-In-One-Pixel-Model.safetensors"
-      min_size: 2000000000
+      min_size: 170000000
+    - name: "Public Prompts Pixel Model"
+      url: "https://huggingface.co/PublicPrompts/All-In-One-Pixel-Model/resolve/main/Public-Prompts-Pixel-Model.ckpt"
+      path: "checkpoints/Public-Prompts-Pixel-Model.ckpt"
+      min_size: 2100000000
     - name: "Pixel Art LoRA (Flux)"
-      url: "https://huggingface.co/Limbicnation/pixel-art-lora/resolve/main/pixel-art-lora.safetensors"
-      path: "loras/pixel-art-lora.safetensors"
-      min_size: 200000000
+      url: "https://huggingface.co/Limbicnation/pixel-art-lora/resolve/main/pytorch_lora_weights.safetensors"
+      path: "loras/pixel-art-lora-flux.safetensors"
+      min_size: 3300000
     - name: "SD VAE FT MSE"
       url: "https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors"
       path: "vae/vae-ft-mse-840000-ema-pruned.safetensors"
